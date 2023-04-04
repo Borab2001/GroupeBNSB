@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe BNSB - Design & Sourcing Office</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <meta name="description" content="Groupe BNSB, a company in which innovation translates an idea into reality in Business, Process and Product."> -->
+    <meta name="description" content="BNSB Group supports all players in the textile sector in their eco-responsible transition to enable the textile industry to be more sustainable.">
+    <meta name="keywords" content="fashion, sustainability, product passport, design, sourcing">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img class="logo" src="/images/logo.webp" alt="logo"></a>
+            <img class="brand_description" src="/images/sous.webp" alt="brand description">
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hero_section">
+            <div class="hero_container">
+                <div class="hero_text_content">
+                    <p class="hello_msg">HELLO!</p>
+                    <h1>We are launching our website very soon</h1>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/groupebnsb/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="index.html" style="display: none;">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/groupe-bnsb/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="#contact_form" class="contact_us">Contact Us</a>
+                </div>
+                <div class="hero_img_content">
+                    <div></div>
+                </div>
+            </div>
+        </section>
+        <section class="contact_section" id="contact_form">
+            <h2 class="contact_header">Contact Us</h2>
+            <div class="contact_underline"></div>
+            <div class="contact_container">
+                <div>
+                    <div class="contact_info">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="contact_text">
+                            <h3 class="contact_title">Call Us</h3>
+                            <span class="contact_subtitle">+90 212 358 04 11</span>
+                        </div>
+                    </div>
+                    <div class="contact_info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="contact_text">
+                            <h3 class="contact_title">Email</h3>
+                            <span class="contact_subtitle">info@groupebnsb.com</span>
+                        </div>
+                    </div>
+                    <div class="contact_info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="contact_text">
+                            <h3 class="contact_title">Location</h3>
+                            <span class="contact_subtitle">Istanbul - Turkey</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact_form" action="/success" method="POST" name="contact_form" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+                    <input name="bot-field" style="display: none;">
+                    <div class="contact_inputs">
+                        <div class="contact_content">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" aria-label="name" autocomplete="off" required>
+                        </div>
+                        <div class="contact_content">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" aria-label="email" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="contact_content">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" aria-label="subject" autocomplete="off" required>
+                    </div>
+                    <div class="contact_content">
+                        <label for="message">Message</label>
+                        <textarea name="contact-body" id="" cols="0" rows="7" autocomplete="off" class="contact__input" name="message" aria-label="message" required></textarea>
+                    </div>
+                    <div>
+                        <button class="contact_button" type="submit">
+                            Send Message
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="copyright_section">
+            <div class="copyright_container">
+                <p>Copyright © 2022 Groupe BNSB. All rights reserved.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

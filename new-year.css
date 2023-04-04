@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth !important;
+    --scroll-behavior: smooth !important;      /*SCROLL BEHAVIOUR SMOOTH EQUIVALENT FOR SAFARI */
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* overflow: hidden; */
+}
+header {
+    padding: 25px 0;
+    width: 100%;
+    height: auto;
+}
+h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 22px;
+}
+nav {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo {
+    width: auto;
+    height: 75px;
+}
+nav .brand_description {
+    width: auto;
+    height: 3.5rem;
+}
+.new-year-msg-section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+    padding: 40px 0 80px;
+}
+.new-year-msg-container {
+    position: relative;
+    z-index: 1;
+    width: 92vw;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: #1d1d1f;
+    font-family: 'Cambria', serif;
+}
+.message-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.new-year-msg-container .message {
+    text-align: justify;
+}
+.new-year-logo {
+    width: 300px;
+    height: auto;
+}
+.new-year-msg-container p {
+    font-size: 1.25rem;
+    line-height: 1.25em;
+    font-style: italic;
+}
+.xmas-video {
+    border-radius: 200px 0;
+}
+.xmas-pic {
+    display: none;
+    border-radius: 200px 0;
+    height: 100%;
+    width: auto;
+}
+.cities-section {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+.cities-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+#istanbul, #paris {
+    position: absolute;
+    height: auto;
+    width: 65%;
+    overflow: hidden;
+}
+#istanbul {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(/images/istanbul.webp);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+#paris {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(/images/paris.webp);
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* 840px at minimum */
+@media screen and (max-width: 991px) {
+    .new-year-msg-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .new-year-msg-container p {
+        font-size: 1.15rem;
+    }
+    .new-year-logo {
+        width: 250px;
+    }    
+}
+@media screen and (max-width: 767px) {
+    .new-year-msg-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 440px;
+    }
+    .xmas-video {
+        display: none;
+    }
+    .xmas-pic {
+        display: block;
+        order: 1;
+        height: 600px;
+        width: 337.5px;
+        /* border-radius: 200px 200px 0 0; */
+    }
+    .message-block {
+        order: 2;
+    }
+    .new-year-logo {
+        width: 250px;
+    }
+}
