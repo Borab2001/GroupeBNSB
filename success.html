@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Sent</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FONT AWESOME CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- <meta name="description" content="Your message is sent ! Thanks for contacting us. We will get back to you soon."> -->
     <meta name="robots" content="noindex">
 </head>
@@ -35,5 +41,35 @@
             </div>
         </section>
     </main>
+    <nav>
+        <div id="nav-links">
+            <a class="nav-link" href="index.html">
+                <h2 class="nav-link-label active">Home</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
+            </a>
+            <a class="nav-link" href="about.html">
+                <h2 class="nav-link-label">About</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
+            </a>
+            <a class="nav-link" href="#">
+                <h2 class="nav-link-label">Partners</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80"/>
+            </a>
+            <a class="nav-link" href="gallery.html">
+                <h2 class="nav-link-label">Gallery</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
+            </a>
+                <a class="nav-link" href="contact.html">
+                <h2 class="nav-link-label active">Contact</h2>
+                <img class="nav-link-image" src="https://images.unsplash.com/photo-1665910407771-bc84ad45676b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"/>
+            </a>
+        </div>
+    </nav>
+
+    <button id="nav-toggle" type="button" onclick="toggleNav()">
+        <i class="open fa-light fa-bars-staggered"></i>
+        <i class="close fa-light fa-xmark-large"></i>
+    </button>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>

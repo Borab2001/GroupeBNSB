@@ -38,10 +38,11 @@
               <div class="about-text-layout">
                 <h2>Lab Design</h2>
                 <p>Lab Design & Market intelligence</p>
-                <p>Fast Fashion Focus, & Consultancy for Sustainability Business</p>
+                <p>Fast Fashion Focus & Consultancy for Sustainability Business</p>
                 <p>Experience in European, Eastern Europe and Mena market</p>
                 <p>Presentation every 3 weeks with inspiration & Board, & sketch</p>
-                <p>Graphic design support, Exclusive print service</p>
+                <p>Graphic design support</p>
+                <p>Exclusive print service</p>
                 <p class="less-margin"> Proactive organization</p>
                 <span>Focus on each client, analyse of brand, range product, price positioning, benchmark, built a collection according to the strategy of the client, and fashion industry way</span>
                 <p>R&D for fabric, Yarn, accessories, services from the market</p>
@@ -53,33 +54,32 @@
     <nav>
       <div id="nav-links">
           <a class="nav-link" href="index.html">
-              <h2 class="nav-link-label rubik-font">Home</h2>
+              <h2 class="nav-link-label">Home</h2>
               <img class="nav-link-image" src="https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
           </a>
           <a class="nav-link" href="about.html">
-              <h2 class="nav-link-label rubik-font">About</h2>
+              <h2 class="nav-link-label active">About</h2>
               <img class="nav-link-image" src="https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
           </a>
           <a class="nav-link" href="#">
-              <h2 class="nav-link-label rubik-font">Partners</h2>
+              <h2 class="nav-link-label">Partners</h2>
               <img class="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80"/>
           </a>
           <a class="nav-link" href="gallery.html">
-              <h2 class="nav-link-label rubik-font">Gallery</h2>
+              <h2 class="nav-link-label">Gallery</h2>
               <img class="nav-link-image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
           </a>
               <a class="nav-link" href="contact.html">
-              <h2 class="nav-link-label rubik-font">Contact</h2>
+              <h2 class="nav-link-label">Contact</h2>
               <img class="nav-link-image" src="https://images.unsplash.com/photo-1665910407771-bc84ad45676b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"/>
           </a>
       </div>
-    </nav>
+  </nav>
 
     <button id="nav-toggle" type="button" onclick="toggleNav()">
         <i class="open fa-light fa-bars-staggered"></i>
         <i class="close fa-light fa-xmark-large"></i>
     </button>
-    <script src="https://cdn.skypack.dev/@studio-freight/lenis@0.1.12"></script>
     <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
@@ -102,20 +102,37 @@ body {
 
 section {
   width: 100%;
-  min-height: 600px;
+  /* min-height: 600px; */
+  height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  overflow-y: auto;
+  padding: 2rem 0;
 }
 
 .about-container {
   width: 60%;
   max-width: 800px;
   color: #1d1d1f;
+  height: 100vh;
+}
+
+.about-text-layout:first-of-type {
+  padding-top: 8rem !important;
+}
+
+.about-text-layout:last-of-type {
+  padding-bottom: 8rem !important;
 }
 
 .about-text-layout {
-  margin: 180px 0;
+  height: auto;
+  padding: 4rem 0;
+  /* display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: center; */
 }
 
 .about-container h1,
@@ -358,76 +375,3 @@ body[data-nav="true"] > #nav-toggle > .close {
     transform: translate(-50%, -50%) scale(1);
 }
 </style>
-<script>
-let minimap = document.createElement("div");
-let minimapSize = document.createElement("div");
-let viewer = document.createElement("div");
-let minimapContent = document.createElement("iframe");
-let scale = 0.1;
-let realScale;
-
-minimap.className = "minimap__container";
-minimapSize.className = "minimap__size";
-viewer.className = "minimap__viewer";
-minimapContent.className = "minimap__content";
-
-minimap.append(minimapSize, viewer, minimapContent);
-document.body.appendChild(minimap);
-
-let html = document.documentElement.outerHTML.replace(
-  /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-  ""
-);
-
-let iframeDoc = minimapContent.contentWindow.document;
-
-iframeDoc.open();
-iframeDoc.write(html);
-iframeDoc.close();
-
-function getDimensions() {
-  let bodyWidth = document.body.clientWidth;
-  let bodyRatio = document.body.clientHeight / bodyWidth;
-  let winRatio = window.innerHeight / window.innerWidth;
-
-  minimap.style.width = "15%";
-
-  realScale = minimap.clientWidth / bodyWidth;
-
-  minimapSize.style.paddingTop = `${bodyRatio * 100}%`;
-  viewer.style.paddingTop = `${winRatio * 100}%`;
-
-  minimapContent.style.transform = `scale(${realScale})`;
-  minimapContent.style.width = `${100 / realScale}%`;
-  minimapContent.style.height = `${100 / realScale}%`;
-}
-
-function trackScroll() {
-  viewer.style.transform = `translateY(${window.scrollY * realScale}px)`;
-}
-
-getDimensions();
-window.addEventListener("scroll", trackScroll);
-window.addEventListener("resize", getDimensions);
-
-
-const lenis = new Lenis({
-  lerp: 0.1,
-  smooth: true,
-  direction: "vertical"
-});
-window.lenis = lenis;
-
-
-//get scroll value
-lenis.on("scroll", ({ scroll, limit }) => {
-  console.log({ scroll, limit });
-});
-
-function raf() {
-  lenis.raf();
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-</script>
