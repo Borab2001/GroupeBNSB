@@ -20,6 +20,7 @@
 <body>
   <main class="main">
     <section class="gallery-section" id="gallery-section">
+      <div class="gallery-container">
         <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
           <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
           <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
@@ -30,32 +31,33 @@
           <img class="image" src="/images/paris.webp" draggable="false" />
           <img class="image" src="/images/istanbul.webp" draggable="false" />
         </div>
+      </div>
     </section>
   </main>
   <nav>
     <div id="nav-links">
-        <a class="nav-link" href="/index.html">
+        <a class="nav-link" href="index.html">
             <h2 class="nav-link-label rubik-font">Home</h2>
             <img class="nav-link-image" src="https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
         </a>
-        <a class="nav-link" href="#">
-            <h2 class="nav-link-label rubik-font">Work</h2>
-            <img class="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80"/>
-        </a>
-        <a class="nav-link" href="/about.html">
+        <a class="nav-link" href="about.html">
             <h2 class="nav-link-label rubik-font">About</h2>
             <img class="nav-link-image" src="https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
         </a>
-        <a class="nav-link" href="./gallery.html">
+        <a class="nav-link" href="#">
+            <h2 class="nav-link-label rubik-font">Partners</h2>
+            <img class="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80"/>
+        </a>
+        <a class="nav-link" href="gallery.html">
             <h2 class="nav-link-label rubik-font">Gallery</h2>
             <img class="nav-link-image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"/>
         </a>
-            <a class="nav-link" href="/contact.html">
+            <a class="nav-link" href="contact.html">
             <h2 class="nav-link-label rubik-font">Contact</h2>
             <img class="nav-link-image" src="https://images.unsplash.com/photo-1665910407771-bc84ad45676b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"/>
         </a>
     </div>
-  </nav>
+</nav>
   
   <button id="nav-toggle" type="button" onclick="toggleNav()">
     <i class="open fa-light fa-bars-staggered"></i>
@@ -70,29 +72,40 @@ html {
     --scroll-behavior: smooth !important;      /*SCROLL BEHAVIOUR SMOOTH EQUIVALENT FOR SAFARI */
 }
 
-main {
+/* main {
     height: 100vh;
     width: 100vw;
     margin: 0rem;
     overflow-x: hidden;
     overflow-y: scroll;
-}
-
-main::-webkit-scrollbar{
-    display: none;
-}
+} */
 
 .gallery-section {
-    height: 300vh;
+    height: 100vh;
+    width: 100vw;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
     transition: all 400ms ease-in-out;
 }
 
 body[data-nav="true"] > main .gallery-section {
-  height: 100vh;
+  overflow: hidden;
 }
 
+body[data-nav="false"] > main .gallery-section {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.gallery-section::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+    --scroll-behavior: smooth;
+}
+
+.gallery-container {
+  height: 300vh;
+}
 
 #image-track {
     display: flex;
@@ -131,36 +144,9 @@ body[data-nav="true"] > main .gallery-section {
     }
 }
 </style>
-<!-- <script>
-if (window.matchMedia("(min-width: 768px)").matches) {
-  const track = document.getElementById("image-track");
-
-  const handleOnScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercentage = (scrollTop / scrollHeight) * -100;
-
-    track.dataset.percentage = scrollPercentage;
-
-    track.animate(
-      { transform: `translate(${scrollPercentage}%, -50%)` },
-      { duration: 1200, fill: "forwards" }
-    );
-
-    for (const image of track.getElementsByClassName("image")) {
-      image.animate(
-        { objectPosition: `${100 + scrollPercentage}% center` },
-        { duration: 1200, fill: "forwards" }
-      );
-    }
-  };
-
-  window.addEventListener("scroll", handleOnScroll);
-}
-</script> -->
 <script>
 if (window.matchMedia("(min-width: 768px)").matches) {
-  const gallerySection = document.querySelector("main");
+  const gallerySection = document.querySelector(".gallery-section");
   const track = document.getElementById("image-track");
 
   const handleOnScroll = () => {
