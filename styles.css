@@ -115,7 +115,8 @@ body[data-nav="true"] > nav > #nav-links {
 }
   
 body[data-nav="true"] > #nav-toggle {
-    background-color: rgb(85, 130, 149);
+    /* background-color: rgb(85, 130, 149); */
+    background-color: rgb(124, 130, 132);
 }
   
 body:not([data-nav="true"]) > #nav-toggle > .open {
@@ -128,7 +129,7 @@ body:not([data-nav="true"]) > #nav-toggle > .open {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    color: rgb(246, 231, 224);
+    color: #f6f6f6;
     font-size: 1.75rem;
     opacity: 0;
     transition: transform, opacity;
