@@ -110,10 +110,11 @@ section {
 }
 
 .about-container {
-  width: 60%;
-  max-width: 800px;
+  width: 100%;
+  max-width: calc(800px + 2rem);
   color: #1d1d1f;
   height: 100vh;
+  padding: 0 1rem;
 }
 
 .about-text-layout:first-of-type {
@@ -201,5 +202,25 @@ section {
     z-index: -1;
     transform-origin: 0 0;
     border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .about-container h1,
+  .about-container h2 {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.35em;
+      font-family: "Rubik", sans-serif;
+      margin-bottom: 40px;
+  }
+
+  .about-container p {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.35em;
+      font-family: "Rubik", sans-serif;
+      padding-left: 40px;
+      margin-bottom: 30px;
+  }
 }
 </style>

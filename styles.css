@@ -399,13 +399,13 @@ header {
     }
 }
 @media screen and (max-width: 480px) {
-    nav .logo {
+    .header-container a .logo {
         width: auto;
-        height: 60px;
+        height: 4rem;
     }
-    nav .brand_description {
-        width: 22rem;
-        height: auto;
+    .header-container .brand_description {
+        width: auto;
+        height: 2.5rem;
     }
     .hero_container {
         height: 500px;
