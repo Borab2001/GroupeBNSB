@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="bgimg-1">
@@ -14,7 +15,7 @@
       </div>
       
       <div class="about-container">
-        <div class="about-text-layout">
+        <div class="about-text-layout" data-aos="fade-right" data-aos-duration="800">
           <h1>Our Mission</h1>
           <p>Innovation translates an idea into a reality in Business, Process and Product.</p>
           <p>We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.</p>
@@ -28,7 +29,7 @@
       </div>
       
       <div class="about-container">
-        <div class="about-text-layout">
+        <div class="about-text-layout" data-aos="fade-right" data-aos-duration="800">
           <h2>Research &#124  Design  &#124  Development  &#124  Execution</h2>
           <p>Groupe BNSB Offering the full services from Design Conceptions, Production , QC & Shipping – enables our customers to maximise high quality and brand identity.</p>
           <p>Our Creative & Strategic thinking knowledge in the fashion industry will be bridging right designs with right producers considering your requests and expectations.</p>
@@ -44,7 +45,7 @@
       </div>
       
       <div class="about-container">
-        <div class="about-text-layout">
+        <div class="about-text-layout" data-aos="fade-right" data-aos-duration="800">
           <h2>Lab Design</h2>
           <p>Lab Design & Market intelligence</p>
           <p>Fast Fashion Focus & Consultancy for Sustainability Business</p>
@@ -60,11 +61,14 @@
 </body>
 </html>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
 body, html {
     height: 100%;
     margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
+    font-size: 15px;
+    background-color: #fff;
+    font-family: "Rubik", sans-serif;
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -126,7 +130,7 @@ body, html {
 .about-container h1,
 .about-container h2 {
   font-size: 34px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.35em;
   margin-bottom: 40px;
 }
@@ -160,3 +164,7 @@ body, html {
     }
 }
 </style>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
