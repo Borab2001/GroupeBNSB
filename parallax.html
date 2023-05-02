@@ -8,7 +8,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bgimg-1">
+      <div class="bgimg-1">
         <div class="caption">
         <span class="border">SCROLL DOWN</span>
         </div>
@@ -22,11 +22,13 @@
         </div>
       </div>
 
-      <div class="bgimg-2">
-        <div class="caption">
-        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Sustainability</span>
+      <section>
+        <div class="bgimg-2">
+          <div class="caption">
+          <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Sustainability</span>
+          </div>
         </div>
-      </div>
+      </section>
       
       <div class="about-container">
         <div class="about-text-layout" data-aos="fade-right" data-aos-duration="800">
@@ -37,12 +39,13 @@
           <p>Our QC teams are experts in the field, that we currently perform the full process for all shipments. This enables us to deliver a consistently high standard of goods to all our customers.</p>
         </div>
       </div>
-      
-      <div class="bgimg-3">
-        <div class="caption">
-        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+      <section>
+        <div class="bgimg-3">
+          <div class="caption">
+          <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+          </div>
         </div>
-      </div>
+      </section>
       
       <div class="about-container">
         <div class="about-text-layout" data-aos="fade-right" data-aos-duration="800">
@@ -75,10 +78,10 @@ body, html {
     position: relative;
     opacity: 0.75;
     background-attachment: fixed;
-    background-position: center;
+    background-position: 55% 100%;
     background-repeat: no-repeat;
     background-size: cover;
-
+    transform: translateZ(-1px) scale(2);
 }
 .bgimg-1 {
     background-image: url("/images/istanbul.webp");
@@ -102,11 +105,6 @@ body, html {
     width: 100%;
     text-align: center;
     color: #000;
-}
-
-.caption span.border {
-    background-color: #111;
-    color: #fff;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;

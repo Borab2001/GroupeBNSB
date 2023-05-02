@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main class="wrapper">
+      <section class="section parallax bg1">
+         <h1>Cute Kitten</h1>
+      </section>
+      <section class="section static">
+         <h1>Boring</h1>
+      </section>
+      <section class="section parallax bg2">
+         <h1>Fluffy Kitten</h1>
+      </section>
+   </main>
+</body>
+</html>
+<style>
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section { 
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  transform-style: preserve-3d;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: red;
+  height: 100vh;
+}
+
+.bg1::after {
+  background: url('/images/eco.webp') no-repeat center / cover;
+}
+
+.bg2::after {
+  background: url('/images/eco.webp') no-repeat center / cover;
+}
+</style>

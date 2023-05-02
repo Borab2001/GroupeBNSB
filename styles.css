@@ -88,6 +88,7 @@ body[data-nav="true"] > nav > #nav-links {
     box-sizing: border-box;
     color: #1d1d1f;
     font-size: 1.25rem;
+    font-weight: 500;
     margin: 0rem;
     text-transform: uppercase;
 }
@@ -225,7 +226,7 @@ header {
 .hero_text_content h1 {
     font-size: 3.5rem;
     margin-top: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 45px;
 }
 .socials {
