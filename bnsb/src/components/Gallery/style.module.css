@@ -16,6 +16,11 @@
     flex-direction: column;
     gap: 2vw;
     min-width: 250px;
+    position: relative;
+}
+
+.column:nth-of-type(1) {
+    top: -45%;
 }
 
 .imageContainer {

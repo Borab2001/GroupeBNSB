@@ -2,19 +2,22 @@ import Image from 'next/image';
 import styles from './style.module.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import useDimension from '@/app/hooks/useDimension';
 
 const images = [
     "" //images here
 ]
 
 export default function Index() {
+    
     const container = useRef(null);
+    const { height } = useDimension();
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['star end', 'end start']
     })
 
-    const y = useTransform(scrollYProgress, [0, 1], [0, 2000])
+    const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
 
     return (
         <div className={styles.gallery}>
