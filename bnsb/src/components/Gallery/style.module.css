@@ -6,6 +6,7 @@
     gap: 2vw;
     padding: 2vw;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .column {
@@ -27,4 +28,8 @@
 
 .imageContainer img {
     object-fit: cover;
+}
+
+.gallerySpacer {
+    height: 100vh;
 }

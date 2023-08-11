@@ -24,8 +24,9 @@ export default function Phrase() {
             scrollTrigger: {
                 trigger: container.current,
                 start: 'top',
-                end: `+=${window.innerHeight / 1.5}`,
-                markers: false,
+                // end: `+=${window.innerHeight / 1.5}`,
+                end: `+=${window.innerHeight / 2.5}`,
+                markers: true,
                 scrub: true
             }
         })
