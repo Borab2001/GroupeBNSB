@@ -1,3 +1,5 @@
+"use client";
+
 import Phrase from '@/components/Phrases/Index'
 import styles from './page.module.css'
 import Lenis from '@studio-freight/lenis'

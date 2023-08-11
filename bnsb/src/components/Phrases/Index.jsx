@@ -6,7 +6,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 
 export default function Phrase() {
+    
+    // PHRASE FOR ONE PARAGRAPH
     const phrase = "Innovation translates an idea into a reality in Business, Process and Product. We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.";
+    
+    // PHRASE FOR MULRIPLE PARAGRAPHS
+    // const phrases = [
+    //     "Innovation translates an idea into a reality in Business, Process and Product. We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida.",
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo a augue iaculis gravida."
+    // ];
 
     const refs = useRef([])
     const container = useRef(null);
@@ -32,6 +56,7 @@ export default function Phrase() {
         })
     }
 
+    // SPLITWORDS FOR ONE PARAGRAPH
     const splitWords = () => {
         let body = []
         phrase.split(" ").forEach((word, index) => {
@@ -40,6 +65,24 @@ export default function Phrase() {
         })
         return body;
     }
+
+    // SPLITWORDS FOR MULTIPLE PARAGRAPHS
+    // const splitWords = () => {
+    //     let body = [];
+    //     phrases.forEach((phrase, phraseIndex) => {
+    //         body.push(
+    //             <p className={styles.sentences} key={`phrase_${phraseIndex}`}>
+    //                 {phrase.split(" ").map((word, wordIndex) => (
+    //                     <span key={`word_${phraseIndex}_${wordIndex}`}>
+    //                         {splitLetters(word)}
+    //                         {wordIndex < phrase.split(' ').length - 1 && ' '}
+    //                     </span>
+    //                 ))}
+    //             </p>
+    //         )
+    //     })
+    //     return body;
+    // }
 
     const splitLetters = (word) => {
         let letters = [];

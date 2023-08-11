@@ -11,6 +11,7 @@
     width: 90%;
     display: flex;
     flex-wrap: wrap;
+    /* gap: 2rem; */ /* FOR MULTIPLE PARAGRAPHS */
 }
 
 .phraseBody p {
@@ -23,3 +24,8 @@
 .phraseBody span {
     opacity: 0.35;
 }
+
+/* FOR MULTIPLE PARAGRAPHS */
+/* .sentences > span {
+    opacity: 1;
+} */
