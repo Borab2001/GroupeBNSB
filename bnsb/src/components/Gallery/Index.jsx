@@ -14,9 +14,12 @@ const images = [
     "4.jpg",
     "5.jpg",
     "6.jpg",
-    "7.webp",
+    "7.jpg",
     "8.jpg",
-    "9.webp"
+    "9.webp",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg"
 ]
 
 export default function Gallery() {
@@ -33,7 +36,7 @@ export default function Gallery() {
     const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2])
     const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
     const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
-
+    const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
 
     useEffect(() => {
         const lenis = new Lenis()
@@ -63,6 +66,7 @@ export default function Gallery() {
                 <Column images={[images[0], images[1], images[2]]} y={y1}/>
                 <Column images={[images[3], images[4], images[5]]} y={y2}/>
                 <Column images={[images[6], images[7], images[8]]} y={y3}/>
+                <Column images={[images[9], images[10], images[11]]} y={y4}/>
             </div>
             {/* <div className={styles.spacer}></div> */}
         </div>
