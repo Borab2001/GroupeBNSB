@@ -8,8 +8,9 @@ import { useEffect, useRef } from 'react';
 export default function Phrase() {
     
     // PHRASE FOR ONE PARAGRAPH
-    const phrase = "Innovation translates an idea into a reality in Business, Process and Product. We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.";
-    
+    // const phrase = "Innovation translates an idea into a reality in Business, Process and Product. We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.";
+    const phrase = "Innovation translates an idea into reality ";
+
     // PHRASE FOR MULRIPLE PARAGRAPHS
     // const phrases = [
     //     "Innovation translates an idea into a reality in Business, Process and Product. We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.",
@@ -42,15 +43,14 @@ export default function Phrase() {
 
     const createAnimations = () => {
         gsap.to(refs.current, {
-            opacity: 1,
+            opacity: 0.35,
             ease: "none",
             stagger: 0.1,
             scrollTrigger: {
                 trigger: container.current,
                 start: 'top',
-                // end: `+=${window.innerHeight / 1.5}`,
-                end: `+=${window.innerHeight / 2.5}`,
-                markers: true,
+                end: `+=${window.innerHeight / 2.75}`,
+                markers: false,
                 scrub: true
             }
         })

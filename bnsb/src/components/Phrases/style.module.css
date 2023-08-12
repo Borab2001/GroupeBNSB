@@ -1,14 +1,15 @@
 .phrase {
     height: 100vh;
-    margin-bottom: 100vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     color: #000;
+    text-align: center;
 }
 
 .phraseBody {
-    width: 90%;
+    width: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     /* gap: 2rem; */ /* FOR MULTIPLE PARAGRAPHS */
@@ -22,7 +23,7 @@
 }
 
 .phraseBody span {
-    opacity: 0.35;
+    opacity: 1;
 }
 
 /* FOR MULTIPLE PARAGRAPHS */

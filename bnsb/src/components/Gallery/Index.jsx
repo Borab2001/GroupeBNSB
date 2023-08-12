@@ -61,7 +61,7 @@ export default function Gallery() {
 
     return (
         <div>
-            <div className={styles.spacer}></div>
+            {/* <div className={styles.spacer}></div> */}
             <div ref={gallery} className={styles.gallery}>
                 <Column images={[images[0], images[1], images[2]]} y={y1}/>
                 <Column images={[images[3], images[4], images[5]]} y={y2}/>

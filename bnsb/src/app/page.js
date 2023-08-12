@@ -23,8 +23,8 @@ export default function Home() {
   return (
 		<main className={styles.main}>
 			<div className={styles.body}>
-				<Gallery />
 				<Phrase />
+				<Gallery />
 			</div>
 		</main>
 	)
