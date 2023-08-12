@@ -8,83 +8,101 @@ export default function Index() {
 
     return (
         <div className={styles.description}>
-            <AnimatedText>
-                    <h2>
-                        <span>Engineering Student </span>
-                        <a href='https://www.isep.fr/'>@ISEP</a>
-                        <span> &#x1F1EB;&#x1F1F7; &amp; </span>
-                        <a href='https://www.sydney.edu.au/'>@SydneyUni</a>
-                        <span> &#x1F1E6;&#x1F1FA;</span>
-                    </h2>
-            </AnimatedText>
+            {/* FIRST PART */}
             <AnimatedText>
                 <h2>
-                    My Interests
+                    Our Mission
                 </h2>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Passionate about creating &amp; designing
+                    Innovation translates an idea into a reality in Business, Process and Product.
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Sports (played high-level of football)
+                    We help company to create a new fashion system with high degree of flexibility through innovation and sourcing process with our designers and experts.
                 </p>
             </AnimatedText>
-            <AnimatedText>
-                <p>
-                    Making beats on FL Studio
-                </p>
-            </AnimatedText>
+
+
+            {/* SECOND PART */}
             <AnimatedText>
                 <h2>
-                    My Activities
+                    Research &#124;  Design  &#124;  Development  &#124;  Execution
                 </h2>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Food distribution for people in need at Paris City Hall
+                    Groupe BNSB Offering the full services from Design Conceptions, Production , QC &amp; Shipping – enables our customers to maximise high quality and brand identity.
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Creation Pole in an association helping international students
+                    Our Creative &amp; Strategic thinking knowledge in the fashion industry will be bridging right designs with right producers considering your requests and expectations.
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Member of a job service association for students
+                    Our partners are fully approved by Social Compliance Companies – Sedex &amp; BSCI, Fama for Licenced items. We follow up all order with a KPI supplier management.
                 </p>
             </AnimatedText>
+            <AnimatedText>
+                <p>
+                    Our QC teams are experts in the field, that we currently perform the full process for all shipments. This enables us to deliver a consistently high standard of goods to all our customers.
+                </p>
+            </AnimatedText>
+
+
+            {/* THIRD PART */}
             <AnimatedText>
                 <h2>
-                    My Work
+                    Lab Design
                 </h2>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Like working on ambitious and diverse projects
+                    Lab Design &amp; Market intelligence
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Currently working on Maison Ana&eacute;&rsquo;s fully automatized e-commerce web app with admin dashboard
+                    Fast Fashion Focus &amp; Consultancy for Sustainability Business
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Ex-front-end engineer intern at Cypheme Anti-Counterfeit Technologies
+                    Experience in European, Eastern Europe and Mena market
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Worked on a carbon footprint calculator for the startup Tickarbone
+                    Presentation every 3 weeks with inspiration, board &amp; sketch
                 </p>
             </AnimatedText>
             <AnimatedText>
                 <p>
-                    Here are some of my projects:
+                    Graphic design support
+                </p>
+            </AnimatedText>
+            <AnimatedText>
+                <p>
+                    Exclusive print service
+                </p>
+            </AnimatedText>
+            <AnimatedText>
+                <p className={styles.lessMargin}>
+                    Proactive organization
+                </p>
+            </AnimatedText>
+            <AnimatedText>
+                <span>
+                    Focus on each client, analyse of brand, range product, price positioning, benchmark, built a collection according to the strategy of the client, and fashion industry way
+                </span>
+            </AnimatedText>
+            <AnimatedText>
+                <p>
+                    R&amp;D for fabric, Yarn, accessories, services from the market
                 </p>
             </AnimatedText>
         </div>
