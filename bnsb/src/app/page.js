@@ -3,6 +3,10 @@
 import Description from '@/components/Description/Index';
 import Gallery from '@/components/Gallery/Index';
 import Phrase from '@/components/Phrase/Index';
+import Preloader from '@/components/Preloader/Index';
+import { AnimatePresence } from 'framer-motion';
+
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 
 // import Lenis from '@studio-freight/lenis';
@@ -10,19 +14,27 @@ import styles from './page.module.css';
 
 export default function Home() {
   
-	// useEffect(() => {
-	// 	const lenis = new Lenis()
+	const [isLoading, setIsLoading] = useState(true);
 
-	// 	function raf(time) {
-	// 	lenis.raf(time)
-	// 	requestAnimationFrame(raf)
-	// 	}
+	useEffect(() => {
+		(
+			async () => {
+				setTimeout(() => {
+					setIsLoading(false);
+					document.body.style.cursor = 'default'
+				}, 2000)
+			}
+		)()
+	}, [])
 
-	// 	requestAnimationFrame(raf)
-	// }, []);
-
-  return (
+  	return (
 		<main className={styles.main}>
+			<AnimatePresence mode='wait'>
+				{
+					isLoading && <Preloader />
+				}
+			</AnimatePresence>
+			
 			<div className={styles.body}>
 				<Phrase />
 				<Gallery />
