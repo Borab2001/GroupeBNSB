@@ -1,7 +1,8 @@
 "use client";
 
-import Phrase from '@/components/Phrases/Index';
+import Description from '@/components/Description/Index';
 import Gallery from '@/components/Gallery/Index';
+import Phrase from '@/components/Phrase/Index';
 import styles from './page.module.css';
 
 // import Lenis from '@studio-freight/lenis';
@@ -25,6 +26,7 @@ export default function Home() {
 			<div className={styles.body}>
 				<Phrase />
 				<Gallery />
+				<Description />
 			</div>
 		</main>
 	)

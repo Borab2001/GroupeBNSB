@@ -22,7 +22,7 @@ const images = [
     "12.jpg"
 ]
 
-export default function Gallery() {
+export default function Index() {
   
     const gallery = useRef(null);
     const [dimension, setDimension] = useState({width:0, height:0});
