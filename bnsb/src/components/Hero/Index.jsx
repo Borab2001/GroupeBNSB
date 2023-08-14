@@ -1,10 +1,10 @@
 import styles from './style.module.css';
 import Image from 'next/image';
+import Phrase from '@/components/Phrase/Index';
 
 export default function Index() {
     return (
         <div className={styles.hero}>
-            <h2>Innovation translates an idea into reality</h2>
             <div className={styles.heroImages}>
                 <div className={styles.heroLeft}>
                     <div className={styles.heroTopLeftImage}>

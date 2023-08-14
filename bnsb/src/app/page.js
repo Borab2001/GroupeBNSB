@@ -2,7 +2,6 @@
 
 import Description from '@/components/Description/Index';
 import Gallery from '@/components/Gallery/Index';
-import Hero from '@/components/Hero/Index';
 import Phrase from '@/components/Phrase/Index';
 import Preloader from '@/components/Preloader/Index';
 import { AnimatePresence } from 'framer-motion';
@@ -41,7 +40,6 @@ export default function Home() {
 				<Phrase />
 				<Gallery />
 				<Description />
-				<Hero />
 			</div>
 		</main>
 	)
