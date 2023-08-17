@@ -39,7 +39,7 @@
     display: block;
 }
 
-.description a {
+/* .description a {
     text-decoration: none;
     color: #000;
     width:fit-content;
@@ -58,7 +58,7 @@
     background-color: #000;
     transition: all 0.25s ease-out;
     border-radius: 30px;
-}
+} */
   
 .description a:hover:after {
     width: 100%;

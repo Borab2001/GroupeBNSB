@@ -1,6 +1,7 @@
 "use client";
 
 import Description from '@/components/Description/Index';
+import Footer from '@/components/Footer/Index';
 import Gallery from '@/components/Gallery/Index';
 // import Header from '@/components/Header/Index';
 import Phrase from '@/components/Phrase/Index';
@@ -42,6 +43,7 @@ export default function Home() {
 				<Phrase />
 				<Gallery />
 				<Description />
+				<Footer />
 			</div>
 		</main>
 	)
