@@ -1,11 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTransform, useScroll, motion } from 'framer-motion';
+import { motion, useTransform, useScroll } from 'framer-motion';
 
 import styles from './style.module.css';
 import Image from 'next/image';
-import Lenis from '@studio-freight/lenis';
 
 const images = [
     "1.webp",
@@ -20,17 +19,17 @@ const images = [
     "10.webp",
     "11.webp",
     "12.webp"
-]
+];
 
 export default function Index() {
   
-    const gallery = useRef(null);
-    const [dimension, setDimension] = useState({width:0, height:0});
-
+    const galleryRef = useRef(null);
     const { scrollYProgress } = useScroll({
-        target: gallery,
+        target: galleryRef,
         offset: ['start end', 'end start']
-    })
+    });
+
+    const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
     const { height } = dimension;
     const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2])
@@ -39,57 +38,42 @@ export default function Index() {
     const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
 
     useEffect(() => {
-        const lenis = new Lenis()
-
-        const raf = (time) => {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
         const resize = () => {
-            setDimension({width: window.innerWidth, height: window.innerHeight})
-        }
+            setDimension({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        };
 
-        window.addEventListener("resize", resize)
-        requestAnimationFrame(raf);
+        window.addEventListener("resize", resize);
         resize();
 
-        return () => {
-            window.removeEventListener("resize", resize);
-        }
-    }, [])
+        return () => window.removeEventListener("resize", resize);
+    }, []);
 
     return (
-        <div>
-            {/* <div className={styles.spacer}></div> */}
-            <div ref={gallery} className={styles.gallery}>
-                <Column images={[images[0], images[1], images[2]]} y={y1}/>
-                <Column images={[images[3], images[4], images[5]]} y={y2}/>
-                <Column images={[images[6], images[7], images[8]]} y={y3}/>
-                <Column images={[images[9], images[10], images[11]]} y={y4}/>
-            </div>
-            {/* <div className={styles.spacer}></div> */}
+        <div ref={galleryRef} className={styles.gallery}>
+            <Column images={[images[0], images[1], images[2]]} y={y1} />
+            <Column images={[images[3], images[4], images[5]]} y={y2} />
+            <Column images={[images[6], images[7], images[8]]} y={y3} />
+            <Column images={[images[9], images[10], images[11]]} y={y4} />
         </div>
-    )
+    );
 }
 
-const Column = ({images, y}) => {
+const Column = ({ images, y }) => {
     return (
-        <motion.div 
-            className={styles.column}
-            style={{y}}
-        >
-        {
-            images.map( (src, i) => {
-            return <div key={i} className={styles.imageContainer}>
-                <Image 
-                    src={`/images/${src}`}
-                    alt='image'
-                    fill
-                />
-            </div>
-            })
-        }
+        <motion.div className={styles.column} style={{ y }}>
+            {images.map((src, index) => (
+                <div key={index} className={styles.imageContainer}>
+                    <Image 
+                        src={`/images/${src}`}
+                        alt={`Gallery image ${index + 1}`}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+            ))}
         </motion.div>
-    )
-}
+    );
+};
