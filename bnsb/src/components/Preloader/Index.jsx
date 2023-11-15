@@ -3,7 +3,8 @@
 import styles from './style.module.css';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { opacity, slideUp } from './preloadAnim';
+import { slideUp } from './preloadAnim';
+import opacity from './preloadAnim';
 
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo", "Merhaba"]
 
