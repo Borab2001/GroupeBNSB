@@ -1,5 +1,5 @@
 import styles from './style.module.css';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Phrase from '@/components/Phrase/Index';
 
 export default function Index() {
