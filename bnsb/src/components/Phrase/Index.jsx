@@ -4,6 +4,7 @@ import styles from './style.module.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
+import Button from '../Button/Button';
 
 export default function Index() {
     
@@ -75,6 +76,7 @@ export default function Index() {
                 {
                     splitWords()
                 }
+                <Button />
             </div>
         </div>
     )

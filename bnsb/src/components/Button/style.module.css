@@ -1,0 +1,45 @@
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(31, 31, 38); /* Almost dark background */
+    border: 2px solid transparent;
+    border-radius: 10px; /* Adjust for rounded corners */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+    /* Inner white stroke */
+    /* box-shadow: inset 0 0 0 2px white; */
+    /* Solid drop shadow */
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+    /* 1px spread shadow with same color as the button */
+    /* box-shadow: 0 4px 0 #333; */
+    /* Subtle floating effect */
+    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); */
+    /* Low opacity white inner shadow */
+    /* box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); */
+    box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25), /* Inner white shadow */
+    0 4px 4px rgba(150, 150, 150, 0.25), /* Solid drop shadow with 4px spread */
+    0 1px 0 rgb(31, 31, 38), /* Solid drop shadow with 1px spread with button color */
+    0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Subtle floating effect shadow */
+}
+
+@media screen and (min-width: 768px) {
+    .button {
+        padding: 12px 24px; /* Slightly larger padding */
+        font-size: 18px; /* Slightly larger font size */
+        font-weight: 500; /* Medium font weight */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .button {
+        padding: 14px 28px; /* Slightly larger padding */
+        font-size: 20px; /* Slightly larger font size */
+        font-weight: 500; /* Medium font weight */
+    }
+}
