@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -15,9 +17,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ReactLenis root>
+          {children}
+        </ReactLenis>
+      </body>
     </html>
   );
 }
