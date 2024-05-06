@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTransform, useScroll } from 'framer-motion';
 
 import Image from "next/legacy/image";
-import Column from './column';
+import Column from '@/components/ui/column';
 
 const images = [
     "1.webp",

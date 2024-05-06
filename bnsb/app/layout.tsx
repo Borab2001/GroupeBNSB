@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import Preloader from "@/components/preloader";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
 		<body className={inter.className}>
 			{/* <ReactLenis root> */}
 				<Preloader />
+				<Header />
 				{children}
 				<Footer />
 			{/* </ReactLenis> */}
