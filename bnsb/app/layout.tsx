@@ -4,9 +4,10 @@ import "./globals.css";
 
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 // import { useEffect, useState } from "react";
-
 import { AnimatePresence } from 'framer-motion';
+
 import Preloader from "@/components/preloader";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
 			{/* <ReactLenis root> */}
 				<Preloader />
 				{children}
+				<Footer />
 			{/* </ReactLenis> */}
 		</body>
     </html>
