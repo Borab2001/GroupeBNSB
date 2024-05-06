@@ -22,7 +22,7 @@ const Preloader = () => {
     };
 
     return (
-        <div className="relative z-50 h-screen overflow-hidden">
+        <div className="fixed inset-0 z-50 h-screen overflow-hidden">
             <motion.div
                 initial="open"
                 animate={isOpen ? "open" : "closed"}

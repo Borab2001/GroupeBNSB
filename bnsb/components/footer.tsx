@@ -3,7 +3,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="mb-8">
+        <footer className="my-8">
             <p className="w-full text-center">&#169; Groupe BNSB {currentYear}. All rights reserved</p>
         </footer>
     );

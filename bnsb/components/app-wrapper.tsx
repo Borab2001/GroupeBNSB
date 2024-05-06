@@ -38,9 +38,11 @@ const AppWrapper: React.FC<AppWrapperProps> = ({
 
     return (
         <ReactLenis root>
-            <AnimatePresence mode='wait'>
-                {isLoading && <Preloader />}
-            </AnimatePresence>
+            <div className="relative z-50">
+                <AnimatePresence mode='wait'>
+                    {isLoading && <Preloader />}
+                </AnimatePresence>
+            </div>
             <Header />
             {children}
             <Footer />
