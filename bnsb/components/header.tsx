@@ -51,7 +51,7 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="fixed right-4 top-4">
+        <header className="fixed z-40 right-4 top-4">
             <motion.div 
                 className="bg-green-400 relative rounded-3xl"
                 variants={variants}

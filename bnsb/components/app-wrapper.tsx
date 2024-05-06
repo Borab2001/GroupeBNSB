@@ -31,12 +31,12 @@ const AppWrapper: React.FC<AppWrapperProps> = ({
 
     return (
         <ReactLenis root>
-            <Header />
-            {children}
-            <Footer />
             <AnimatePresence mode='wait'>
                 {isLoading && <Preloader />}
             </AnimatePresence>
+            <Header />
+            {children}
+            <Footer />
         </ReactLenis>
     );
 }
