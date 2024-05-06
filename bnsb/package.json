@@ -10,12 +10,10 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.47",
-    "clsx": "^2.1.1",
     "framer-motion": "^11.1.7",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^2.3.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
