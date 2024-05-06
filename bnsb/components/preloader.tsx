@@ -27,7 +27,7 @@ const Preloader = () => {
                 initial="open"
                 animate={isOpen ? "open" : "closed"}
                 variants={topVariants}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
                 className="absolute left-0 right-0 top-0 bg-black"
             />
 
@@ -35,7 +35,7 @@ const Preloader = () => {
                 initial="open"
                 animate={isOpen ? "open" : "closed"}
                 variants={bottomVariants}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
                 className="absolute left-0 right-0 bottom-0 bg-black"
             />
         </div>
