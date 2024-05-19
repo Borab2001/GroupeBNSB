@@ -5,7 +5,7 @@ import Hero from "@/components/hero";
 export default function Home() {  
 
   	return (
-		<main className="">
+		<main className="overflow-x-hidden">
 			<Hero />
 			<Cards />
 			<Gallery />
