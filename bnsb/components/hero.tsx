@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 const Hero = () => {
@@ -15,7 +15,12 @@ const Hero = () => {
             <h2 className="text-[max(2vw,24px)] text-center text-balance">
                 Innovation and Excellence in Design and Sourcing
             </h2>
-            <Button onClick={() => router.push("/contact")}>
+            <Button 
+                onClick={() => router.push("/contact")}
+                variant="default"
+                size="lg"
+                className="rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.25),_0_4px_4px_rgba(150,150,150,0.25),_0_1px_0_rgb(31,31,38),_0_10px_15px_-3px_rgba(0,0,0,0.1)]"
+            >
                 Contact
             </Button>
         </div>
