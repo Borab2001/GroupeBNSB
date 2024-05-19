@@ -94,7 +94,7 @@ const Nav = () => {
                 {links.map((link, index) => (
                     <motion.div 
                         key={index}
-                        className="text-4xl text-black"
+                        className="text-4xl text-white"
                         custom={index}
                         variants={animated}
                         animate="enter"
@@ -114,7 +114,7 @@ const Nav = () => {
                 {socials.map((social, index) => (
                     <motion.div
                         key={`social_${index}`}
-                        className="w-1/2 text-black"
+                        className="w-1/2 text-white"
                         custom={index}
                         variants={slideIn}
                         animate="enter"

@@ -53,7 +53,7 @@ const Header = () => {
     return (
         <header className="fixed z-40 right-4 top-4">
             <motion.div 
-                className="bg-green-400 relative rounded-3xl"
+                className="bg-black relative rounded-3xl"
                 variants={variants}
                 animate={isActive ? "open" : "closed"}
                 initial="closed"
