@@ -51,9 +51,9 @@ interface TeamCardProps {
                     <Image
                         src={image}
                         alt={`${name} image`}
-                        height={10}
-                        width={10}
-                        className="rounded-xl h-52 w-full object-cover opacity-75"
+                        className="rounded-xl h-52 w-full object-cover overflow-hidden opacity-75"
+                        width={100}
+                        height={100}
                     />
                     <div className="flex flex-row items-center justify-between pt-2">
                         <h3 className="text-xl font-semibold text-neutral-200">

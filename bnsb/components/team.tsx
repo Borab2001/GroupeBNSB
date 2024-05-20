@@ -4,23 +4,40 @@ import TeamCard from "@/components/ui/team-card";
 
 const teamMembers = [
   {
-    image: "/path/to/image1.jpg",
-    name: "John Doe",
-    description: "Team member description 1",
+    image: "/1.webp",
+    name: "Berrin Bahar",
+    description: "Chief Executive Office & Founder",
     link: "https://linkedin.com/in/johndoe",
   },
   {
-    image: "/path/to/image2.jpg",
-    name: "Jane Smith",
-    description: "Team member description 2",
-    link: "https://linkedin.com/in/janesmith",
+    image: "/2.webp",
+    name: "Berrin Bahar",
+    description: "Chief Executive Office & Founder",
+    link: "https://linkedin.com/in/johndoe",
   },
-  // Add more team members here
+  {
+    image: "/3.webp",
+    name: "Berrin Bahar",
+    description: "Chief Executive Office & Founder",
+    link: "https://linkedin.com/in/johndoe",
+  },
+  {
+    image: "/4.webp",
+    name: "Berrin Bahar",
+    description: "Chief Executive Office & Founder",
+    link: "https://linkedin.com/in/johndoe",
+  },
+  {
+    image: "/5.webp",
+    name: "Berrin Bahar",
+    description: "Chief Executive Office & Founder",
+    link: "https://linkedin.com/in/johndoe",
+  },
 ];
 
 export default function Team() {
     return (
-      <div className="flex flex-wrap gap-6">
+      <div className="px-4 flex flex-wrap justify-between items-center gap-6">
 			{teamMembers.map((member, index) => (
 				<TeamCard
 					key={index}
