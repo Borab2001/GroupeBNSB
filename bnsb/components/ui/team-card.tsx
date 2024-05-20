@@ -51,7 +51,7 @@ interface TeamCardProps {
                     <Image
                         src={image}
                         alt={`${name} image`}
-                        className="rounded-xl h-52 w-full object-cover overflow-hidden opacity-75"
+                        className="rounded-xl h-52 w-full object-cover overflow-hidden"
                         width={100}
                         height={100}
                     />
