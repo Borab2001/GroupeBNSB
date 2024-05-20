@@ -110,7 +110,7 @@ const Nav = () => {
                 ))}
             </div>
 
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-y-1">
                 {socials.map((social, index) => (
                     <motion.div
                         key={`social_${index}`}
@@ -123,8 +123,12 @@ const Nav = () => {
                     >
                         <Link 
                             href={social.url}
+                            className="relative after:absolute after:bg-white after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
                         >
-                            {social.name}
+                            <span className="text-white">
+                                {social.name}
+                            </span>
+                            
                         </Link>
                     </motion.div>
                 ))}
