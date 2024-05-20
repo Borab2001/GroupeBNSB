@@ -33,6 +33,8 @@
       --ring: 240 10% 3.9%;
 
       --radius: 0.5rem;
+
+      --main-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 4px rgba(150, 150, 150, 0.25), 0 1px 0 rgb(31, 31, 38), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 
     .dark {

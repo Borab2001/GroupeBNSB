@@ -34,7 +34,7 @@ interface TeamCardProps {
                 mouseX.set(e.clientX - left);
                 mouseY.set(e.clientY - top);
             }}
-            className="group relative max-w-[350px] w-full overflow-hidden rounded-xl bg-neutral-950"
+            className="group relative max-w-[350px] w-full overflow-hidden rounded-xl bg-zinc-50"
             >
             <div className="absolute right-5 top-0 h-px w-80 bg-gradient-to-l from-transparent via-white/30 via-10% to-transparent" />
             <motion.div
@@ -46,7 +46,7 @@ interface TeamCardProps {
                     `,
                 }}
             />
-            <div className="relative flex flex-col gap-3 rounded-xl border border-white/10 px-4 py-5">
+            <div className="relative flex flex-col gap-3 rounded-xl border border-black/10 px-4 py-5">
                 <div className="space-y-2">
                     <Image
                         src={image}
@@ -56,7 +56,7 @@ interface TeamCardProps {
                         height={100}
                     />
                     <div className="flex flex-row items-center justify-between pt-2">
-                        <h3 className="text-xl font-semibold text-neutral-200">
+                        <h3 className="text-xl font-semibold text-main">
                             {name}
                         </h3>
                     </div>
@@ -67,7 +67,7 @@ interface TeamCardProps {
                         onClick={() => router.push(link)}
                         variant="default"
                         size="default"
-                        className="bg-[#1f1f26] shadow-[inset_0_1px_0_rgba(255,255,255,0.25),_0_4px_4px_rgba(150,150,150,0.25),_0_1px_0_rgb(31,31,38),_0_10px_15px_-3px_rgba(0,0,0,0.1)]"
+                        className="bg-main shadow-main-shadow"
                     >
                         See on Linkedin
                     </Button>
