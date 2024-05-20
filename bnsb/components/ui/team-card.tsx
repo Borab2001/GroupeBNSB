@@ -1,17 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import { Button } from "./button";
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 
-import productImage from "@/assets/background.png";
-import { Button } from "./button";
-import { useRouter } from "next/navigation";
 
-export function TeamCard() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const router = useRouter();
+interface TeamCardProps {
+    image: string;
+    name: string;
+    description: string;
+    link: string;
+  }
+  
+  const TeamCard: React.FC<TeamCardProps> = ({ 
+    image, 
+    name, 
+    description, 
+    link 
+}) => {
+    
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+    const router = useRouter();
 
     return (
         <div
@@ -27,28 +40,31 @@ export function TeamCard() {
             <motion.div
                 className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
                 style={{
-                background: useMotionTemplate`
-                                radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(51, 51, 51, 0.4), transparent 80%)
-                            `,
+                background: useMotionTemplate
+                    `
+                        radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(51, 51, 51, 0.4), transparent 80%)
+                    `,
                 }}
             />
             <div className="relative flex flex-col gap-3 rounded-xl border border-white/10 px-4 py-5">
                 <div className="space-y-2">
                     <Image
-                        src={productImage}
-                        alt="Product image"
+                        src={image}
+                        alt={`${name} image`}
                         height={10}
                         width={10}
                         className="rounded-xl h-52 w-full object-cover opacity-75"
                     />
                     <div className="flex flex-row items-center justify-between pt-2">
-                        <h3 className="text-xl font-semibold text-neutral-200">John Doe</h3>
+                        <h3 className="text-xl font-semibold text-neutral-200">
+                            {name}
+                        </h3>
                     </div>
                     <p className="text-sm leading-[1.5] text-neutral-400 pb-3">
-                        Description
+                        {description}
                     </p>
                     <Button 
-                        onClick={() => router.push("")}
+                        onClick={() => router.push(link)}
                         variant="default"
                         size="default"
                         className="bg-[#1f1f26] shadow-[inset_0_1px_0_rgba(255,255,255,0.25),_0_4px_4px_rgba(150,150,150,0.25),_0_1px_0_rgb(31,31,38),_0_10px_15px_-3px_rgba(0,0,0,0.1)]"
@@ -60,3 +76,5 @@ export function TeamCard() {
         </div>
     );
 }
+
+export default TeamCard;
