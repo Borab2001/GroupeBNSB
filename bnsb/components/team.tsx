@@ -6,47 +6,55 @@ const teamMembers = [
 	{
 		image: "/1.webp",
 		name: "Berrin Bahar",
-		description: "Chief Executive Office & Founder",
-		link: "https://linkedin.com/in/johndoe",
+		description: "Founder & Chief Executive Office",
+		link: "https://www.linkedin.com/in/berrin-bahar-a8947718/",
 	},
 	{
 		image: "/2.webp",
-		name: "Berrin Bahar",
-		description: "Chief Executive Office & Founder",
+		name: "Sibel Yavuz",
+		description: "Head Of Fashion Retailers",
 		link: "https://linkedin.com/in/johndoe",
 	},
 	{
 		image: "/3.webp",
-		name: "Berrin Bahar",
-		description: "Chief Executive Office & Founder",
+		name: "Yavuz Özbay",
+		description: "Financial Advisor",
 		link: "https://linkedin.com/in/johndoe",
 	},
 	{
 		image: "/4.webp",
-		name: "Berrin Bahar",
-		description: "Chief Executive Office & Founder",
+		name: "Pelin Dalkiliç",
+		description: "Quality Control",
 		link: "https://linkedin.com/in/johndoe",
 	},
 	{
 		image: "/5.webp",
-		name: "Berrin Bahar",
-		description: "Chief Executive Office & Founder",
-		link: "https://linkedin.com/in/johndoe",
+		name: "Bora Balos",
+		description: "Freelance Software Engineer",
+		link: "https://www.linkedin.com/in/bora-balos/",
 	},
 ];
 
 export default function Team() {
     return (
-      <div className="px-4 py-16 flex flex-wrap justify-center items-center gap-4">
-			{teamMembers.map((member, index) => (
-				<TeamCard
-					key={index}
-					image={member.image}
-					name={member.name}
-					description={member.description}
-					link={member.link}
-				/>
-			))}
-      </div>
+		<div className="flex flex-col items-center justify-center">
+			<h2 className="w-full px-4 text-[max(3vw,24px)] leading-16 text-balance text-center font-semibold bg-gradient-to-b from-black to-slate-700 text-transparent bg-clip-text">
+				Our Team
+			</h2>
+			<h2 className="inline-flex px-4 text-[max(3vw,24px)] animate-text-gradient bg-gradient-to-r from-[#ACACAC] via-[#363636] to-[#ACACAC] bg-[200%_auto] text-3xl text-center text-transparent font-medium bg-clip-text">
+				Text Animated Gradient
+			</h2>
+			<div className="max-w-6xl mx-auto px-4 py-16 flex flex-wrap justify-center items-center gap-4">
+				{teamMembers.map((member, index) => (
+					<TeamCard
+						key={index}
+						image={member.image}
+						name={member.name}
+						description={member.description}
+						link={member.link}
+					/>
+				))}
+			</div>
+		</div>
     );
 }

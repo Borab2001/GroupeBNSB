@@ -34,7 +34,7 @@ interface TeamCardProps {
                 mouseX.set(e.clientX - left);
                 mouseY.set(e.clientY - top);
             }}
-            className="group relative max-w-[350px] w-full overflow-hidden rounded-xl bg-zinc-50"
+            className="group relative max-w-[350px] w-full rounded-xl bg-white"
             >
             <div className="absolute right-5 top-0 h-px w-80 bg-gradient-to-l from-transparent via-white/30 via-10% to-transparent" />
             <motion.div
@@ -42,11 +42,11 @@ interface TeamCardProps {
                 style={{
                 background: useMotionTemplate
                     `
-                        radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(51, 51, 51, 0.4), transparent 80%)
+                        radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(200, 200, 200, 0.4), transparent 80%)
                     `,
                 }}
             />
-            <div className="relative flex flex-col gap-3 rounded-xl border border-black/10 px-4 py-5">
+            <div className="relative flex flex-col gap-3 rounded-lg border border-black/10 px-4 py-5">
                 <div className="space-y-2">
                     <Image
                         src={image}
