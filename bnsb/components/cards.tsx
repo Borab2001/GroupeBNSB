@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 const Cards = () => {
     return (
-        <div className="h-screen flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 my-12">
             <Card />
             <Card />
             <Card />
