@@ -41,9 +41,9 @@ export default function Team() {
 			<h2 className="w-full px-4 text-[max(3vw,24px)] leading-16 text-balance text-center font-semibold bg-gradient-to-b from-black to-slate-700 text-transparent bg-clip-text">
 				Our Team
 			</h2>
-			<h2 className="inline-flex px-4 text-[max(3vw,24px)] animate-text-gradient bg-gradient-to-r from-[#ACACAC] via-[#363636] to-[#ACACAC] bg-[200%_auto] text-3xl text-center text-transparent font-medium bg-clip-text">
-				Text Animated Gradient
-			</h2>
+			<h3 className="inline-flex px-4 text-[max(3vw,24px)] animate-text-gradient bg-gradient-to-r from-[#ACACAC] via-[#363636] to-[#ACACAC] bg-[200%_auto] text-3xl text-center text-transparent font-medium bg-clip-text">
+				a full of talent 
+			</h3>
 			<div className="max-w-6xl mx-auto px-4 py-16 flex flex-wrap justify-center items-center gap-4">
 				{teamMembers.map((member, index) => (
 					<TeamCard
