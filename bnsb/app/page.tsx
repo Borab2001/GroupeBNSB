@@ -7,7 +7,7 @@ import TextRevealByWord from "@/components/ui/text-reveal";
 export default function Home() {  
 
   	return (
-		<main className="overflow-x-hidden">
+		<main>
 			<Hero />
 			{/* <Cards /> */}
 			<Team />
