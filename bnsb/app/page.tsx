@@ -12,7 +12,7 @@ export default function Home() {
 			{/* <Cards /> */}
 			<Team />
 			<Gallery />
-			<TextRevealByWord text={"Lorem ipsum dolor this is a text reveal animation text"} />
+			{/* <TextRevealByWord text={"Lorem ipsum dolor this is a text reveal animation text"} /> */}
 		</main>
   	);
 }
