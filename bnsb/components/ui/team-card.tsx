@@ -56,9 +56,9 @@ interface TeamCardProps {
                         height={100}
                     />
                     <div className="flex flex-row items-center justify-between pt-2">
-                        <h3 className="text-xl font-semibold text-main">
+                        <h4 className="text-xl font-semibold text-main">
                             {name}
-                        </h3>
+                        </h4>
                     </div>
                     <p className="text-sm leading-[1.5] text-neutral-400 pb-3">
                         {description}

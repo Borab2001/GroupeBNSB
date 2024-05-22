@@ -50,7 +50,6 @@ const Footer = () => {
                             </MagneticIcon>
                         ))}
                     </div>
-                    {/* TODO: Magnetic socials icons here */}
                     <p className="w-full text-center">&#169; Groupe BNSB {currentYear}. All rights reserved</p>
                 </div>
             </div>
