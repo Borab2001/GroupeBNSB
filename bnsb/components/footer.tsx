@@ -1,3 +1,5 @@
+import MagneticIcon from "./ui/magnetic-icon";
+
 const Footer = () => {
     
     const currentYear = new Date().getFullYear();
@@ -36,12 +38,11 @@ const Footer = () => {
                         Groupe BNSB
                     </span>
                     {socials.map((social, index) => (
-                        <div
+                        <MagneticIcon
                             key={index}
-                            className=""
                         >
                             {social.name}
-                        </div>
+                        </MagneticIcon>
                     ))}
                     {/* TODO: Magnetic socials icons here */}
                     <p className="w-full text-center">&#169; Groupe BNSB {currentYear}. All rights reserved</p>
