@@ -4,12 +4,12 @@ const Footer = () => {
 
     return (
         <footer 
-            className="relative h-[800px]" 
+            className="relative h-[100vh]" 
             style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         > {/* my-8 */}
-            <div className="relative h-[calc(100vh+800px)] -top-[100vh]">
-                <div className="sticky top-[calc(100vh-800px)] h-[800px] flex flex-col justify-center items-center gap-12">
-                    <span className="inline-flex animate-text-gradient bg-gradient-to-r from-[#ACACAC] via-[#363636] to-[#ACACAC] bg-[200%_auto] text-3xl md:text-9xl text-center text-transparent font-medium bg-clip-text">
+            <div className="relative h-[calc(100vh+100vh)] -top-[100vh]">
+                <div className="sticky top-[calc(100vh-100vh)] h-[100vh] px-4 flex flex-col justify-center items-center gap-12">
+                    <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-5xl sm:text-7xl lg:text-9xl text-center text-transparent font-medium bg-clip-text">
                         Groupe BNSB
                     </span>
                     {/* TODO: Magnetic socials icons here */}
