@@ -1,4 +1,6 @@
-import MagneticIcon from "./ui/magnetic-icon";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import MagneticIcon from "@/components/ui/magnetic-icon";
+import Link from "next/link";
 
 const Footer = () => {
     
@@ -8,22 +10,22 @@ const Footer = () => {
         {
             name: 'Facebook',
             url: '/',
-            icon: '',
+            icon: <FaFacebookF size={32} />,
         },
         {
             name: 'LinkedIn',
             url: '/',
-            icon: '',
+            icon: <FaLinkedinIn size={32} />,
         },
         {
             name: 'Instagram',
             url: '/',
-            icon: '',
+            icon: <FaInstagram size={32} />,
         },
         {
             name: 'X',
             url: '/',
-            icon: '',
+            icon: <FaXTwitter size={32} />,
         },
     ];
 
@@ -37,13 +39,17 @@ const Footer = () => {
                     <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-[max(10vw,42px)] whitespace-normal text-center text-transparent font-medium bg-clip-text">
                         Groupe BNSB
                     </span>
-                    {socials.map((social, index) => (
-                        <MagneticIcon
-                            key={index}
-                        >
-                            {social.name}
-                        </MagneticIcon>
-                    ))}
+                    <div className="flex w-full max-w-md flex-row justify-between items-center px-4">
+                        {socials.map((social, index) => (
+                            <MagneticIcon
+                                key={index}
+                            >
+                                <Link href={social.url}>
+                                    {social.icon}
+                                </Link>
+                            </MagneticIcon>
+                        ))}
+                    </div>
                     {/* TODO: Magnetic socials icons here */}
                     <p className="w-full text-center">&#169; Groupe BNSB {currentYear}. All rights reserved</p>
                 </div>
