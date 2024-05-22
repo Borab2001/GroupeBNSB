@@ -1,6 +1,29 @@
 const Footer = () => {
     
     const currentYear = new Date().getFullYear();
+    
+    const socials = [
+        {
+            name: 'Facebook',
+            url: '/',
+            icon: '',
+        },
+        {
+            name: 'LinkedIn',
+            url: '/',
+            icon: '',
+        },
+        {
+            name: 'Instagram',
+            url: '/',
+            icon: '',
+        },
+        {
+            name: 'X',
+            url: '/',
+            icon: '',
+        },
+    ];
 
     return (
         <footer 
@@ -12,6 +35,14 @@ const Footer = () => {
                     <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-[max(10vw,42px)] whitespace-normal text-center text-transparent font-medium bg-clip-text">
                         Groupe BNSB
                     </span>
+                    {socials.map((social, index) => (
+                        <div
+                            key={index}
+                            className=""
+                        >
+                            {social.name}
+                        </div>
+                    ))}
                     {/* TODO: Magnetic socials icons here */}
                     <p className="w-full text-center">&#169; Groupe BNSB {currentYear}. All rights reserved</p>
                 </div>
