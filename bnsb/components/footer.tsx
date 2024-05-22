@@ -9,7 +9,7 @@ const Footer = () => {
         > {/* my-8 */}
             <div className="relative h-[calc(100vh+100vh)] -top-[100vh]">
                 <div className="sticky top-[calc(100vh-100vh)] h-[100vh] px-4 flex flex-col justify-center items-center gap-12">
-                    <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-5xl sm:text-7xl lg:text-9xl text-center text-transparent font-medium bg-clip-text">
+                    <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-[max(10vw,42px)] whitespace-normal text-center text-transparent font-medium bg-clip-text">
                         Groupe BNSB
                     </span>
                     {/* TODO: Magnetic socials icons here */}
