@@ -39,7 +39,7 @@ const Footer = () => {
                     <span className="inline-flex animate-text-gradient bg-gradient-to-r from-zinc-400 via-main to-zinc-400 bg-[200%_auto] text-[max(10vw,42px)] whitespace-normal text-center text-transparent font-medium bg-clip-text">
                         Groupe BNSB
                     </span>
-                    <div className="flex w-full max-w-md flex-row justify-between items-center px-4">
+                    <div className="flex w-full max-w-md flex-row justify-evenly items-center">
                         {socials.map((social, index) => (
                             <MagneticIcon
                                 key={index}
