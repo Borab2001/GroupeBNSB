@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
 
-    const [size, setSize] = useState<{width: number | string, height: number}>({
+    const [size, setSize] = useState<{width: number | string, height: number | string}>({
         width: 464,
         height: 650,
     });
@@ -33,9 +33,10 @@ const Header = () => {
 
     const handleResize = () => {
         if (typeof window !== 'undefined') {
+            const isLandscape = window.matchMedia("(orientation: landscape)").matches;
             setSize({
                 width: window.innerWidth > 480 ? 464 : 'calc(100vw - 16px)',
-                height: 650,
+                height: isLandscape ? 'calc(100vh - 8px)' : 650,
             });
         }
     };

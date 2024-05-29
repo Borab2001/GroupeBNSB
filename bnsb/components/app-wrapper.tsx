@@ -23,9 +23,9 @@ const AppWrapper: React.FC<AppWrapperProps> = ({
 
     useEffect(() => {
         // Disable scrolling while loading
-        window.scrollTo(0, 0);
         document.body.style.maxHeight = "100vh";
         document.body.style.overflow = "hidden";
+        window.scrollTo(0, 0);
 
         setTimeout(() => {
             setIsLoading(false);
