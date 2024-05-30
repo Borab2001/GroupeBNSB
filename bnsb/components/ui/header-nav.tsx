@@ -2,7 +2,15 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-const Nav = () => {
+interface NavProps {
+    isLandscape: boolean;
+    isMobile: boolean;
+}
+
+const Nav: React.FC<NavProps> = ({
+    isLandscape,
+    isMobile
+}) => {
     
     const links = [
         {
@@ -89,8 +97,8 @@ const Nav = () => {
     }
 
     return (
-        <nav className="flex flex-col justify-between h-full pt-24 px-10 pb-12 box-border">
-            <div className="flex flex-col gap-4">
+        <nav className={`flex ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4 py-12' : 'flex-col pt-24 pb-12'} justify-between h-full  px-10 box-border`}>
+            <div className="flex flex-col gap-4 justify-end">
                 {links.map((link, index) => (
                     <motion.div 
                         key={index}
@@ -110,11 +118,11 @@ const Nav = () => {
                 ))}
             </div>
 
-            <div className="flex flex-wrap gap-y-1">
+            <div className="flex flex-wrap items-end gap-y-1">
                 {socials.map((social, index) => (
                     <motion.div
                         key={`social_${index}`}
-                        className="w-1/2 text-white"
+                        className={`${(isLandscape && isMobile) ? 'w-1/2' : 'w-1/2'} text-white`}
                         custom={index}
                         variants={slideIn}
                         animate="enter"

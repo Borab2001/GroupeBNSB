@@ -9,6 +9,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
 
+    const [isLandscape, setIsLandscape] = useState(false);
+    const isMobileDevice = () => {
+        const userAgent = typeof navigator === 'undefined' ? '' : navigator.userAgent;
+        return /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    };
+    const isMobile = isMobileDevice();
+
     const [size, setSize] = useState<{width: number | string, height: number | string}>({
         width: 464,
         height: 650,
@@ -34,9 +41,11 @@ const Header = () => {
     const handleResize = () => {
         if (typeof window !== 'undefined') {
             const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+            
+            setIsLandscape(isLandscape && isMobile);
             setSize({
-                width: window.innerWidth > 480 ? 464 : 'calc(100vw - 16px)',
-                height: isLandscape ? 'calc(100vh - 8px)' : 650,
+                width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
+                height: isLandscape && isMobile ? 'calc(100vh - 16px)' : 650,
             });
         }
     };
@@ -44,8 +53,10 @@ const Header = () => {
     useEffect(() => {
         handleResize(); // Set the size initially
         window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('orientationchange', handleResize);
         };
     }, []);
 
@@ -60,7 +71,7 @@ const Header = () => {
                 initial="closed"
             >
                 <AnimatePresence>
-                    {isActive && <Nav />}
+                    {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
                 </AnimatePresence>
             </motion.div>
             <HeaderButton isActive={isActive} setIsActive={setIsActive} />
