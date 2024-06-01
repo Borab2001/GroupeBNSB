@@ -18,10 +18,6 @@ const Nav: React.FC<NavProps> = ({
             url: '/main-objectives',
         },
         {
-            name: 'Situation',
-            url: '/situation',
-        },
-        {
             name: 'Partners',
             url: '/partners',
         },
@@ -32,6 +28,10 @@ const Nav: React.FC<NavProps> = ({
         {
             name: 'Raw Materials',
             url: '/raw-materials',
+        },
+        {
+            name: 'Contact',
+            url: '/contact',
         },
     ];
 
