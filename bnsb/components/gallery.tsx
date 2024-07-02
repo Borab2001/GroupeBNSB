@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { useTransform, useScroll } from 'framer-motion';
+import { useEffect, useRef, useState } from "react";
+import { useTransform, useScroll } from "framer-motion";
 
-import Image from "next/legacy/image";
-import Column from '@/components/ui/column';
+import Column from "@/components/ui/column";
 
 const images = [
     "1.webp",
@@ -18,49 +17,65 @@ const images = [
     "9.webp",
     "10.webp",
     "11.webp",
-    "12.webp"
+    "12.webp",
 ];
 
 const Gallery = () => {
-
     const galleryRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: galleryRef,
-        offset: ['start end', 'end start']
+        offset: ["start end", "end start"],
     });
-    
+
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
-    
+
     const { height } = dimension;
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2])
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
-    const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
-    const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
-    
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
+    const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
+    const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
+
     useEffect(() => {
         const resize = () => {
             setDimension({
                 width: window.innerWidth,
-                height: window.innerHeight
+                height: window.innerHeight,
             });
         };
-    
+
         window.addEventListener("resize", resize);
         resize();
-    
+
         return () => window.removeEventListener("resize", resize);
     }, []);
-    
+
     return (
-        <div ref={galleryRef} className="w-screen h-[175vh] bg-[#2d2d2d] relative flex gap-[2vw] p-[2vw] box-border overflow-hidden">
-            <Column images={[images[0], images[1], images[2]]} y={y1} className="-top-[53%]" />
-            <Column images={[images[3], images[4], images[5]]} y={y2} className="-top-[95%]" />
-            <Column images={[images[6], images[7], images[8]]} y={y3} className="-top-[45%] hidden sm:flex" />
-            <Column images={[images[9], images[10], images[11]]} y={y4} className="-top-[85%] hidden md:flex" />
+        <div
+            ref={galleryRef}
+            className="w-screen h-[175vh] bg-[#2d2d2d] relative flex gap-[2vw] p-[2vw] box-border overflow-hidden"
+        >
+            <Column
+                images={[images[0], images[1], images[2]]}
+                y={y1}
+                className="-top-[53%]"
+            />
+            <Column
+                images={[images[3], images[4], images[5]]}
+                y={y2}
+                className="-top-[95%]"
+            />
+            <Column
+                images={[images[6], images[7], images[8]]}
+                y={y3}
+                className="-top-[45%] hidden sm:flex"
+            />
+            <Column
+                images={[images[9], images[10], images[11]]}
+                y={y4}
+                className="-top-[85%] hidden md:flex"
+            />
         </div>
     );
-}
- 
+};
+
 export default Gallery;
-
-
