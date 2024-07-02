@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { Button } from "./button";
@@ -54,7 +54,10 @@ interface TeamCardProps {
                         className="rounded-xl h-52 w-full object-cover overflow-hidden"
                         width={100}
                         height={100}
-                    />
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                     <div className="flex flex-row items-center justify-between pt-2">
                         <h4 className="text-xl font-semibold text-main">
                             {name}

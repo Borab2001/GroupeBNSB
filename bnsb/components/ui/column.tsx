@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { motion, MotionValue } from "framer-motion";
 
@@ -22,9 +22,11 @@ const Column: React.FC<ColumnProps> = ({ images, y, className }) => {
                     <Image
                         src={`/${src}`}
                         alt={`Gallery image ${index + 1}`}
-                        layout="fill"
-                        objectFit="cover"
-                    />
+                        fill
+                        sizes="100vw"
+                        style={{
+                            objectFit: "cover"
+                        }} />
                 </div>
             ))}
         </motion.div>
