@@ -7,21 +7,19 @@ import { Button } from "./button";
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 
-
 interface TeamCardProps {
     image: string;
     name: string;
     description: string;
     link: string;
-  }
-  
-  const TeamCard: React.FC<TeamCardProps> = ({ 
-    image, 
-    name, 
-    description, 
-    link 
+}
+
+const TeamCard: React.FC<TeamCardProps> = ({
+    image,
+    name,
+    description,
+    link,
 }) => {
-    
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
     const router = useRouter();
@@ -35,13 +33,12 @@ interface TeamCardProps {
                 mouseY.set(e.clientY - top);
             }}
             className="group relative max-w-[350px] w-full rounded-xl bg-white"
-            >
+        >
             <div className="absolute right-5 top-0 h-px w-80 bg-gradient-to-l from-transparent via-white/30 via-10% to-transparent" />
             <motion.div
                 className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
                 style={{
-                background: useMotionTemplate
-                    `
+                    background: useMotionTemplate`
                         radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(200, 200, 200, 0.4), transparent 80%)
                     `,
                 }}
@@ -52,12 +49,9 @@ interface TeamCardProps {
                         src={image}
                         alt={`${name} image`}
                         className="rounded-xl h-52 w-full object-cover overflow-hidden"
-                        width={100}
-                        height={100}
-                        style={{
-                            maxWidth: "100%",
-                            height: "auto"
-                        }} />
+                        width={316}
+                        height={208}
+                    />
                     <div className="flex flex-row items-center justify-between pt-2">
                         <h4 className="text-xl font-semibold text-main">
                             {name}
@@ -66,7 +60,7 @@ interface TeamCardProps {
                     <p className="text-sm leading-[1.5] text-neutral-400 pb-3">
                         {description}
                     </p>
-                    <Button 
+                    <Button
                         onClick={() => router.push(link)}
                         variant="default"
                         size="default"
@@ -78,6 +72,6 @@ interface TeamCardProps {
             </div>
         </div>
     );
-}
+};
 
 export default TeamCard;
