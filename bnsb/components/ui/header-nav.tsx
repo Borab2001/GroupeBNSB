@@ -110,7 +110,10 @@ const Nav: React.FC<NavProps> = ({
                         exit="exit"
                         initial="initial"
                     >
-                        <TransitionLink href={link.url}>
+                        <TransitionLink 
+                            href={link.url}
+                            className="relative block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] hover:translate-x-8"    
+                        >
                             {link.name}
                         </TransitionLink>
                     </motion.div>

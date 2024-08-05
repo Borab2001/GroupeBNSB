@@ -7,11 +7,13 @@ import { usePreloader } from "./preloader-context";
 interface TransitionLinkProps extends LinkProps {
     children: React.ReactNode;
     href: string;
+    className?: string;
 }
 
 const TransitionLink: React.FC<TransitionLinkProps> = ({
     children,
     href,
+    className,
     ...props
 }) => {
     
@@ -23,7 +25,7 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
         setIsOpen(true);
         setTimeout(() => {
             router.push(href);
-        }, 1000);
+        }, 9000);
     }
 
     return (
@@ -31,9 +33,8 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
             href={href} 
             {...props}
             onClick={handleTransition}
-            className="relative block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] hover:translate-x-8"
+            className={className}
         >
-            
             {children}
         </Link>
     );
