@@ -25,7 +25,7 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
         setIsOpen(true);
         setTimeout(() => {
             router.push(href);
-        }, 9000);
+        }, 1000);
     }
 
     return (

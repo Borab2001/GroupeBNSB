@@ -9,7 +9,7 @@ export default function Contact() {
 
   	return (
 		<main className="flex h-screen justify-center items-center">
-			<div className="max-w-5xl">
+			<div className="max-w-3xl w-full">
 				<ContactForm />
 			</div>
 		</main>
