@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { usePreloader } from '@/lib/preloader-context';
 
 const Preloader = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const { isOpen, setIsOpen } = usePreloader();
+    
     useEffect(() => {
         setTimeout(() => {
             setIsOpen(false);
         }, 1000); // Adjust the timeout value as needed
-    }, []);
+    }, [setIsOpen]);
 
     const topVariants = {
         open: { height: '50vh' },
