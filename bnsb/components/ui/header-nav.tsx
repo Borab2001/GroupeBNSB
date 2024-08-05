@@ -15,9 +15,13 @@ const Nav: React.FC<NavProps> = ({
     
     const links = [
         {
-            name: 'Main Objectives',
-            url: '/main-objectives',
+            name: 'Home',
+            url: '/',
         },
+        // {
+        //     name: 'Main Objectives',
+        //     url: '/main-objectives',
+        // },
         {
             name: 'Partners',
             url: '/partners',
