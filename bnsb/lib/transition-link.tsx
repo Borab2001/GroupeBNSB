@@ -31,7 +31,7 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
             href={href} 
             {...props}
             onClick={handleTransition}
-             className="relative block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] hover:translate-x-8"
+            className="relative block transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] hover:translate-x-8"
         >
             
             {children}

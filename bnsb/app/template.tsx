@@ -7,6 +7,7 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Preloader from "@/components/preloader";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { PreloaderProvider } from "@/lib/preloader-context";
 
 interface TemplateProps {
     children: React.ReactNode;
@@ -38,14 +39,16 @@ const Template: React.FC<TemplateProps> = ({
 
     return (
         <ReactLenis root>
-            <div className="relative z-50">
-                <AnimatePresence mode='wait'>
-                    {isLoading && <Preloader />}
-                </AnimatePresence>
-            </div>
-            <Header />
-            {children}
-            <Footer />
+            <PreloaderProvider>
+                <div className="relative z-50">
+                    <AnimatePresence mode='wait'>
+                         <Preloader />
+                    </AnimatePresence>
+                </div>
+                <Header />
+                {children}
+                <Footer />
+            </PreloaderProvider>
         </ReactLenis>
     );
 }
