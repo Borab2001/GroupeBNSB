@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import ButtonText from "@/components/ui/button-text";
 
 const formSchema = z.object({
   firstName: z.string().min(1, { message: "First name is required." }),
@@ -127,7 +128,11 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">Send</Button>
+        <Button type="submit" className="w-full group py-0 h-10">
+          <div className="relative h-full font-medium">
+            <ButtonText label="Send" />
+          </div>
+        </Button>
       </form>
     </Form>
   )

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeaderButtonText from "./header-button-text";
+import ButtonText from "./button-text";
 
 interface HeaderButtonProps {
     isActive: boolean;
@@ -22,14 +22,14 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({
                 transition={{duration: 0.7, ease: [0.76, 0, 0.24, 1]}}
             >
                 <div className="w-full h-full bg-main text-white uppercase group shadow-main-shadow">
-                    <HeaderButtonText label="Menu" />
+                    <ButtonText label="Menu" />
                 </div>
                 <motion.div className="w-full h-full bg-white text-black uppercase absolute top-full group"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isActive ? 1 : 0 }}
                     transition={{duration: 0.7, ease: [0.76, 0, 0.24, 1]}}
                 >
-                    <HeaderButtonText label="Close" />
+                    <ButtonText label="Close" />
                 </motion.div>
             </motion.div>
         </div>

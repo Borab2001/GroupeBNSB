@@ -58,7 +58,7 @@ const Header = () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('orientationchange', handleResize);
         };
-    }, []);
+    }, [handleResize]);
 
     const [isActive, setIsActive] = useState(false);
 

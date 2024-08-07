@@ -1,8 +1,8 @@
-interface HeaderButtonTextProps {
+interface ButtonTextProps {
     label: string;
 }
 
-const HeaderButtonText: React.FC<HeaderButtonTextProps> = ({
+const ButtonText: React.FC<ButtonTextProps> = ({
     label
 }) => {
     return (
@@ -17,5 +17,5 @@ const HeaderButtonText: React.FC<HeaderButtonTextProps> = ({
     );
 }
  
-export default HeaderButtonText;
+export default ButtonText;
 
