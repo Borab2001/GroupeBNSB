@@ -40,7 +40,7 @@ const SlideGallery = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen overflow-scroll transition-all duration-400 ease-in-out" id="gallery-section">
+        <section className="relative w-full overflow-scroll transition-all duration-400 ease-in-out" id="gallery-section">
             <div className="h-[300vh]">
                 <div id="image-track" className="flex gap-[4vmin] fixed z-[-1] left-1/2 top-1/2 transform translate-y-[-50%]">
                     {images.map((src, index) => (
