@@ -30,7 +30,7 @@ const Preloader = () => {
                 animate={isOpen ? "open" : "closed"}
                 variants={topVariants}
                 transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-                className="absolute left-0 right-0 top-0 bg-gradient-to-b from-transparent to-black"
+                className="absolute left-0 right-0 top-0 bg-gradient-to-t from-transparent to-black"
             />
 
             <motion.div
