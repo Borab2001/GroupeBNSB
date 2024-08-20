@@ -18,7 +18,7 @@ const Template: React.FC<TemplateProps> = ({
 }) => {
     const [isLoading, setIsLoading] = useState(true);
 
-      const lenis = useLenis(({ scroll }) => {
+    const lenis = useLenis(({ scroll }) => {
         // called every scroll
     })
 
@@ -40,14 +40,14 @@ const Template: React.FC<TemplateProps> = ({
     return (
         <ReactLenis root>
             <PreloaderProvider>
-                <div className="relative z-50">
+                {/* <div className="relative z-50">
                     <AnimatePresence mode='wait'>
                          <Preloader />
                     </AnimatePresence>
-                </div>
-                <Header />
+                </div> */}
+                {/* <Header /> */}
                 {children}
-                <Footer />
+                {/* <Footer /> */}
             </PreloaderProvider>
         </ReactLenis>
     );
