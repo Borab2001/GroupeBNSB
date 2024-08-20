@@ -38,19 +38,19 @@ const Header = () => {
         }
     }
 
-    const handleResize = () => {
-        if (typeof window !== 'undefined') {
-            const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-            
-            setIsLandscape(isLandscape && isMobile);
-            setSize({
-                width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
-                height: isLandscape && isMobile ? 'calc(100vh - 16px)' : 650,
-            });
-        }
-    };
-
     useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== 'undefined') {
+                const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+                
+                setIsLandscape(isLandscape && isMobile);
+                setSize({
+                    width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
+                    height: isLandscape && isMobile ? 'calc(100vh - 16px)' : 650,
+                });
+            }
+        };
+    
         handleResize(); // Set the size initially
         window.addEventListener('resize', handleResize);
         window.addEventListener('orientationchange', handleResize);
@@ -58,7 +58,7 @@ const Header = () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('orientationchange', handleResize);
         };
-    }, [handleResize]);
+    }, [isMobile]);
 
     const [isActive, setIsActive] = useState(false);
 
