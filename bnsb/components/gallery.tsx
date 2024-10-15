@@ -52,7 +52,7 @@ const Gallery = () => {
     return (
         <div
             ref={galleryRef}
-            className="w-screen h-[175vh] bg-[#2d2d2d] relative flex gap-[2vw] p-[2vw] box-border overflow-hidden"
+            className="w-screen h-[175lvh] bg-[#2d2d2d] relative flex gap-[2vw] p-[2vw] box-border overflow-hidden"
         >
             <Column
                 images={[images[0], images[1], images[2]]}
