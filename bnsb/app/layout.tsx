@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NotificationBar from "@/components/notification-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 		<body className={inter.className}>
+			<NotificationBar />
 			{children}
 			<Analytics />
 		</body>
