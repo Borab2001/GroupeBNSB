@@ -30,7 +30,7 @@ const teamMembers = [
 	{
 		image: "/5.webp",
 		name: "Bora Balos",
-		description: "Freelance Software Engineer",
+		description: "Software Engineer",
 		link: "https://www.linkedin.com/in/bora-balos/",
 	},
 ];
