@@ -14,12 +14,12 @@ const Footer = () => {
         },
         {
             name: 'LinkedIn',
-            url: '/',
+            url: 'https://www.linkedin.com/company/groupe-bnsb/',
             icon: <FaLinkedinIn size={32} />,
         },
         {
             name: 'Instagram',
-            url: '/',
+            url: 'https://www.instagram.com/groupebnsb/',
             icon: <FaInstagram size={32} />,
         },
         {
