@@ -1,113 +1,96 @@
 import {
-  Body,
-  Button,
-  Container,
-  Head,
-  Hr,
-  Html,
-  Img,
-  Preview,
-  Section,
-  Text,
+	Body,
+	Container,
+	Head,
+	Heading,
+	Hr,
+	Html,
+	Preview,
+	Text,
 } from "@react-email/components";
 import * as React from "react";
 
-interface KoalaWelcomeEmailProps {
-  userFirstname: string;
+interface BNSBContactEmailProps {
+	firstName: string;
+	lastName: string;
+	email: string;
+	subject: string;
+	message: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
+	? `https://${process.env.VERCEL_URL}`
+	: "";
 
-export const KoalaWelcomeEmail = ({
-  userFirstname,
-}: KoalaWelcomeEmailProps) => (
-  <Html>
-    <Head />
-    <Preview>
-      The sales intelligence platform that helps you uncover qualified leads.
-    </Preview>
-    <Body style={main}>
-      <Container style={container}>
-        <Img
-          src={`https://groupe-bnsb.com/images/logo.webp`}
-          width="170"
-          height="50"
-          alt="Koala"
-          style={logo}
-        />
-        <Text style={paragraph}>Hi {userFirstname},</Text>
-        <Text style={paragraph}>
-          Welcome to Koala, the sales intelligence platform that helps you
-          uncover qualified leads and close deals faster.
-        </Text>
-        <Section style={btnContainer}>
-          <Button style={button} href="https://getkoala.com">
-            Get started
-          </Button>
-        </Section>
-        <Text style={paragraph}>
-          Best,
-          <br />
-          The Koala team
-        </Text>
-        <Hr style={hr} />
-        <Text style={footer}>
-          470 Noor Ave STE B #1148, South San Francisco, CA 94080
-        </Text>
-      </Container>
-    </Body>
-  </Html>
+const currentYear = new Date().getFullYear();
+
+
+export const BNSBContactEmail = ({
+  	firstName,
+	lastName,
+	email,
+	subject,
+	message
+}: BNSBContactEmailProps) => (
+	<Html>
+		<Head />
+		<Preview>
+			New Contact Submission from {firstName} {lastName}.
+		</Preview>
+		
+		<Body style={main}>
+			<Container style={container}>
+				<Heading style={title}>New Contact Submission</Heading>
+				<Text style={paragraph}>First Name: {firstName}</Text>
+				<Text style={paragraph}>Last Name: {lastName}</Text>
+				<Text style={paragraph}>Email: {email}</Text>
+				<br />
+				<Text style={paragraph}>Subject: {subject}</Text>
+				<Text style={paragraph}>
+					{message}
+				</Text>
+				<Hr style={hr} />
+				<Text style={footer}>
+					Eğlence Sk. No:4, Arnavutköy Mh., 34345 Beşiktas / İstanbul, Türkiye
+					<br />
+					&#169; Groupe BNSB {currentYear}
+				</Text>
+			</Container>
+		</Body>
+	</Html>
 );
 
-KoalaWelcomeEmail.PreviewProps = {
-  userFirstname: "Username",
-} as KoalaWelcomeEmailProps;
-
-export default KoalaWelcomeEmail;
+export default BNSBContactEmail;
 
 const main = {
-  backgroundColor: "#ffffff",
-  fontFamily:
-    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+	backgroundColor: "#ffffff",
+	fontFamily:
+		'-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
 const container = {
-  margin: "0 auto",
-  padding: "20px 0 48px",
+	margin: "0 auto",
+	padding: "20px 0 48px",
 };
 
-const logo = {
-  margin: "0 auto",
-};
+const title = {
+	color: "#000000",
+	fontSize: "24px",
+	fontWeight: "600",
+	marginBottom: "20px",
+}
 
 const paragraph = {
-  fontSize: "16px",
-  lineHeight: "26px",
-};
-
-const btnContainer = {
-  textAlign: "center" as const,
-};
-
-const button = {
-  backgroundColor: "#5F51E8",
-  borderRadius: "3px",
-  color: "#fff",
-  fontSize: "16px",
-  textDecoration: "none",
-  textAlign: "center" as const,
-  display: "block",
-  padding: "12px",
+	fontSize: "16px",
+	lineHeight: "26px",
 };
 
 const hr = {
-  borderColor: "#cccccc",
-  margin: "20px 0",
+	borderColor: "#cccccc",
+	margin: "20px 0",
 };
 
 const footer = {
-  color: "#8898aa",
-  fontSize: "12px",
+	color: "#cccccc",
+	fontSize: "12px",
 };
