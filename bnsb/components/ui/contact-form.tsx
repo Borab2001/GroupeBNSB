@@ -1,11 +1,5 @@
-// components/ContactForm.tsx
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -15,9 +9,18 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import ButtonText from "@/components/ui/button-text";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import ButtonText from "@/components/ui/button-text";
+
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
+
+import { EmailSchema } from "@/schema";
+import { SendEmail } from "@/actions";
 
 const formSchema = z.object({
   firstName: z.string().min(1, { message: "First name is required." }),
