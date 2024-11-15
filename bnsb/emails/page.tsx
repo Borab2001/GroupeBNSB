@@ -15,7 +15,8 @@ interface BNSBContactEmailProps {
 	lastName: string;
 	email: string;
 	subject: string;
-	message: string;
+	// message: string;
+	messageLines: string[];
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -30,7 +31,8 @@ export const BNSBContactEmail = ({
 	lastName,
 	email,
 	subject,
-	message
+	// message,
+	messageLines
 }: BNSBContactEmailProps) => (
 	<Html>
 		<Head />
@@ -46,9 +48,12 @@ export const BNSBContactEmail = ({
 				<Text style={paragraph}>Email: {email}</Text>
 				<br />
 				<Text style={paragraph}>Subject: {subject}</Text>
-				<Text style={paragraph}>
+				{/* <Text style={paragraph}>
 					{message}
-				</Text>
+				</Text> */}
+				{messageLines.map((line, index) => (
+					<Text key={index} style={paragraph}>{line}</Text>
+				))}
 				<Hr style={hr} />
 				<Text style={footer}>
 					Eğlence Sk. No:4, Arnavutköy Mh., 34345 Beşiktas / İstanbul, Türkiye

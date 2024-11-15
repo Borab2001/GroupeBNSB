@@ -11,8 +11,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
     try {
-        const formattedMessage = values.message.replace(/\n/g, "<br>");
-        
+        const messageLines = values.message.split('\n');
+
         const { data, error } = await resend.emails.send({
             from: 'BNSB Website <onboarding@resend.dev>',
             to: ['borabalos9@gmail.com'],
@@ -23,7 +23,8 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
                 lastName: values.lastName,
                 email: values.email,
                 subject: values.subject,
-                message: formattedMessage,
+                // message: values.message,
+                messageLines: messageLines,
             }),
         });
         
