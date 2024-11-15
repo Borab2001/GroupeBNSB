@@ -23,8 +23,8 @@ const teamMembers = [
 	},
 	{
 		image: "/4.webp",
-		name: "Pelin Dalkiliç",
-		description: "Quality Control",
+		name: "Tamer Zakaria",
+		description: "Head of Fashion Retailers ~ Egypt",
 		link: "https://linkedin.com/in/johndoe",
 	},
 	{
