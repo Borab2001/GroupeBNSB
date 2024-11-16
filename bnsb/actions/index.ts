@@ -15,7 +15,7 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
 
         const { data, error } = await resend.emails.send({
             from: 'BNSB Website <onboarding@resend.dev>',
-            to: 'dianeanhduong@gmail.com',
+            to: 'info@groupebnsb.com',
             subject: 'New Contact Submission',
             replyTo: values.email,
             react: React.createElement(BNSBContactEmail, {
