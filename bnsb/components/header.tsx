@@ -46,7 +46,7 @@ const Header = () => {
                 setIsLandscape(isLandscape && isMobile);
                 setSize({
                     width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
-                    height: isLandscape && isMobile ? 'calc(100vh - 16px)' : 650,
+                    height: isLandscape && isMobile ? 'calc(100vh - 32px)' : 'calc(100vh - 32px)',
                 });
             }
         };
@@ -63,18 +63,23 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="fixed z-40 right-8 top-8">
-            <motion.div 
-                className="bg-foreground relative rounded-3xl shadow-main-shadow"
-                variants={variants}
-                animate={isActive ? "open" : "closed"}
-                initial="closed"
-            >
-                <AnimatePresence>
-                    {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
-                </AnimatePresence>
-            </motion.div>
-            <HeaderButton isActive={isActive} setIsActive={setIsActive} />
+        <header className="w-full h-auto flex flex-row justify-start items-center p-4">
+            <p className="uppercase">
+                Groupe BNSB
+            </p>
+            <div className="fixed z-40 right-4 top-4">
+                <motion.div 
+                    className="bg-foreground relative rounded-3xl shadow-main-shadow"
+                    variants={variants}
+                    animate={isActive ? "open" : "closed"}
+                    initial="closed"
+                >
+                    <AnimatePresence>
+                        {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
+                    </AnimatePresence>
+                </motion.div>
+                <HeaderButton isActive={isActive} setIsActive={setIsActive} />
+            </div>
         </header>
     );
 }
