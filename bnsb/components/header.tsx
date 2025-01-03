@@ -63,8 +63,8 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="w-full h-auto flex flex-row justify-start items-center p-4">
-            <p className="uppercase">
+        <header className="w-full h-[72px] flex flex-row justify-start items-center p-4">
+            <p className="uppercase font-medium">
                 Groupe BNSB
             </p>
             <div className="fixed z-40 right-4 top-4">

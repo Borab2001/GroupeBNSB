@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ModeToggle } from "./mode-toggle";
+// import { ModeToggle } from "./mode-toggle";
 
 
 interface NavProps {

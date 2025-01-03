@@ -6,7 +6,7 @@ const ButtonText: React.FC<ButtonTextProps> = ({
     label
 }) => {
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full font-medium">
             <p className="w-full h-full flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:opacity-0 group-hover:[transform:translateY(-100%)]">
                 {label}
             </p>
