@@ -44,6 +44,7 @@ export function ContactForm() {
 
             toast.success("Your message is sent successfully!");
             router.refresh();
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
             toast.error("An error occurred. Please try again later.");
         }
