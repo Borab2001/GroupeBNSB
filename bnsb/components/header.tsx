@@ -63,9 +63,9 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="fixed z-40 right-4 top-16 sm:top-12">
+        <header className="fixed z-40 right-8 top-8">
             <motion.div 
-                className="bg-main relative rounded-3xl shadow-main-shadow"
+                className="bg-foreground relative rounded-3xl shadow-main-shadow"
                 variants={variants}
                 animate={isActive ? "open" : "closed"}
                 initial="closed"
