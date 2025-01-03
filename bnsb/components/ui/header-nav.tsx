@@ -18,18 +18,18 @@ const Nav: React.FC<NavProps> = ({
             name: 'Home',
             url: '/',
         },
-        {
-            name: 'Partners',
-            url: '/partners',
-        },
-        {
-            name: 'Be Circular',
-            url: '/be-circular',
-        },
-        {
-            name: 'Raw Materials',
-            url: '/raw-materials',
-        },
+        // {
+        //     name: 'Partners',
+        //     url: '/partners',
+        // },
+        // {
+        //     name: 'Be Circular',
+        //     url: '/be-circular',
+        // },
+        // {
+        //     name: 'Raw Materials',
+        //     url: '/raw-materials',
+        // },
         {
             name: 'Contact',
             url: '/contact',
@@ -99,13 +99,13 @@ const Nav: React.FC<NavProps> = ({
 
     return (
         <nav className="flex flex-1 flex-col w-full h-full p-2">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4 py-12' : 'flex-col pt-24 pb-12'} justify-between h-full px-10 box-border`}>
-                <div className="flex flex-col gap-4 justify-end">
+                <div className="flex flex-col gap-6 justify-end">
                     {links.map((link, index) => (
                         <motion.div 
                             key={index}
-                            className="text-4xl text-primary-foreground"
+                            className="text-5xl text-primary-foreground"
                             custom={index}
                             variants={animated}
                             animate="enter"
