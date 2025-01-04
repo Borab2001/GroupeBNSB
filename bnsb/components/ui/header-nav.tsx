@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
-// import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "./mode-toggle";
 
 
 interface NavProps {
@@ -99,7 +99,7 @@ const Nav: React.FC<NavProps> = ({
 
     return (
         <nav className="flex flex-1 flex-col w-full h-full p-2">
-            {/* <ModeToggle /> */}
+            <ModeToggle />
             <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4 py-12' : 'flex-col pt-24 pb-12'} justify-between h-full px-10 box-border`}>
                 <div className="flex flex-col gap-6 justify-end">
                     {links.map((link, index) => (
