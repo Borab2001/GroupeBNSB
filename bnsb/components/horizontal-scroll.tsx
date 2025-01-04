@@ -31,7 +31,7 @@ const HorizontalScroll = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["3%", "-62.5%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[300vh]">
+        <section ref={targetRef} className="relative h-[500vh]">
             <div className="sticky top-0 h-screen flex items-center overflow-hidden ">
                 <motion.div style={{ x }} className="flex gap-4">
                     {cities.map((city, index) => (

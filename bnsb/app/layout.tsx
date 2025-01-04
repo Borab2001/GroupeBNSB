@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import ScrollProvider from "@/lib/scroll-provider";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -27,19 +28,21 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
+			<ScrollProvider>
+				<body
+					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 				>
-					<Header />
-					{children}
-				</ThemeProvider>
-			</body>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						<Header />
+						{children}
+					</ThemeProvider>
+				</body>
+			</ScrollProvider>
 		</html>
 	);
 }
