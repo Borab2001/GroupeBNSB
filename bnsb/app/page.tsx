@@ -1,7 +1,9 @@
+import HorizontalScroll from "@/components/horizontal-scroll";
+
 export default function Home() {
     return (
-        <div className="w-full flex flex-1 flex-col flex-grow h-full p-4 ">
-			<div className="w-full flex flex-1 flex-col justify-center items-center">
+        <div className="w-full flex flex-1 flex-col flex-grow h-full p-4">
+			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center">
 				<div className="flex gap-4 flex-col">
 					<h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
 						A more sustainable future for textile
@@ -11,6 +13,7 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
+			<HorizontalScroll />
         </div>
     );
 }
