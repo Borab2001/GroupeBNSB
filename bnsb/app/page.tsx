@@ -1,6 +1,10 @@
 import HorizontalScroll from "@/components/horizontal-scroll";
+import Paragraph from "@/components/paragraph";
 
 export default function Home() {
+
+	const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl";
+
     return (
         <div className="w-full flex flex-1 flex-col flex-grow h-full p-4">
 			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center">
@@ -14,6 +18,7 @@ export default function Home() {
 				</div>
 			</div>
 			<HorizontalScroll />
+			<Paragraph value={paragraph} />
         </div>
     );
 }
