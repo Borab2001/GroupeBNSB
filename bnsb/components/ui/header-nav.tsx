@@ -43,11 +43,11 @@ const Nav: React.FC<NavProps> = ({
         },
         {
             name: 'LinkedIn',
-            url: '/',
+            url: 'https://www.linkedin.com/company/groupe-bnsb/',
         },
         {
             name: 'Instagram',
-            url: '/',
+            url: 'https://www.instagram.com/groupebnsb/',
         },
         {
             name: 'X',
