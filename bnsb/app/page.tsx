@@ -6,8 +6,8 @@ export default function Home() {
 	const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl";
 
     return (
-        <div className="w-full flex flex-1 flex-col flex-grow h-full p-4">
-			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center">
+        <div className="w-full flex flex-1 flex-col flex-grow h-full">
+			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center p-4">
 				<div className="flex gap-4 flex-col">
 					<h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
 						A more sustainable future for textile

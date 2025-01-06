@@ -30,17 +30,17 @@ const HorizontalScroll = () => {
     });
 
     // const x = useTransform(scrollYProgress, [0, 1], ["3%", "-62.5%"]);
-    const x = useTransform(scrollYProgress, [0, 1], ["7.5vw", "-152.5vw"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0", "-164vw"]);
 
 
     return (
-        <section ref={targetRef} className="relative h-[500vh]">
+        <section ref={targetRef} className="relative h-[300vh] sm:h-[400vh] lg:h-[500vh]">
             <div className="sticky top-0 h-screen flex items-center overflow-hidden ">
-                <motion.div style={{ x }} className="flex gap-4">
+                <motion.div style={{ x }} className="flex gap-[2vw] px-[10vw]">
                     {cities.map((city, index) => (
                         <div 
                             key={`city${index}`}
-                            className="w-[80vw] aspect-video bg-gray-300 flex items-center justify-center"    
+                            className="w-[80vw] aspect-[3/4] sm:aspect-square lg:aspect-video bg-gray-300 flex items-center justify-center"    
                         >
                             <Image 
                                 src={city.src}
