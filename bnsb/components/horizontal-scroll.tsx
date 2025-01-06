@@ -11,9 +11,9 @@ const cities = [
         name: 'Istanbul'
     },
     {
-        src: '/images/city1.jpg',
-        alt: 'city2',
-        name: 'City 2'
+        src: '/images/paris.webp',
+        alt: 'Paris',
+        name: 'Paris'
     },
     {
         src: '/images/city1.jpg',
