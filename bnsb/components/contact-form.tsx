@@ -128,8 +128,8 @@ export function ContactForm() {
 					)}
 				/>
 
-				<Button type="submit" className="w-full group py-0 h-10">
-					<div className="relative h-full font-medium">
+				<Button type="submit" className="w-full group py-0 h-10 hover:bg-primary">
+					<div className="relative h-full font-medium overflow-hidden">
 						<ButtonText label="Send" />
 					</div>
 				</Button>
