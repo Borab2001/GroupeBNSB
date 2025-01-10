@@ -37,10 +37,10 @@ const Nav: React.FC<NavProps> = ({
     ];
 
     const socials = [
-        {
-            name: 'Facebook',
-            url: '/',
-        },
+        // {
+        //     name: 'Facebook',
+        //     url: '/',
+        // },
         {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/company/groupe-bnsb/',
@@ -49,10 +49,10 @@ const Nav: React.FC<NavProps> = ({
             name: 'Instagram',
             url: 'https://www.instagram.com/groupebnsb/',
         },
-        {
-            name: 'X',
-            url: '/',
-        },
+        // {
+        //     name: 'X',
+        //     url: '/',
+        // },
     ];
 
     const animated = {
