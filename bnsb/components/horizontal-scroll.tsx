@@ -16,9 +16,9 @@ const cities = [
         name: 'Paris'
     },
     {
-        src: '/images/city1.jpg',
-        alt: 'city3',
-        name: 'City 3'
+        src: '/images/cairo.webp',
+        alt: 'Cairo',
+        name: 'Cairo'
     }
 ]
 
