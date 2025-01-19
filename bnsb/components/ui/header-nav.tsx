@@ -12,6 +12,8 @@ const Nav: React.FC<NavProps> = ({
     isLandscape,
     isMobile
 }) => {
+
+    const currentYear = new Date().getFullYear();
     
     const links = [
         {
@@ -100,7 +102,7 @@ const Nav: React.FC<NavProps> = ({
     return (
         <nav className="flex flex-1 flex-col w-full h-full p-2">
             <ModeToggle />
-            <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4 py-12' : 'flex-col pt-24 pb-12'} justify-between h-full px-10 box-border`}>
+            <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} py-[15vh] md:py-24 justify-between h-full px-10 box-border`}>
                 <div className="flex flex-col gap-6 justify-end">
                     {links.map((link, index) => (
                         <motion.div 
@@ -144,6 +146,7 @@ const Nav: React.FC<NavProps> = ({
                             </Link>
                         </motion.div>
                     ))}
+                    <p className="w-full pt-8 text-primary-foreground">&#169; Groupe BNSB {currentYear}. All rights reserved.</p>
                 </div>
             </div>
         </nav>
