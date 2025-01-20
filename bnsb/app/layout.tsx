@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ScrollProvider from "@/lib/scroll-provider";
 import PageTransition from "@/components/page-transition";
 import { AnimatePresence } from "framer-motion";
+import Footer from "@/components/ui/footer";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
 							<PageTransition>
 								<Header />
 								{children}
+								<Footer />
 							</PageTransition>
 						</AnimatePresence>
 					</ThemeProvider>
