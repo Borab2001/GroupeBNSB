@@ -5,6 +5,7 @@ import Nav from "@/components/ui/header-nav";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -64,9 +65,11 @@ const Header = () => {
 
     return (
         <header className="w-full h-[72px] flex flex-row justify-start items-center p-4">
-            <p className="uppercase font-medium">
+            <Link
+                href="/"
+                className="uppercase font-medium">
                 Groupe BNSB
-            </p>
+            </Link>
             <div className="fixed z-40 right-4 top-4">
                 <motion.div 
                     className="bg-foreground relative rounded-3xl shadow-main-shadow"
