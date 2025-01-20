@@ -20,6 +20,14 @@ const Nav: React.FC<NavProps> = ({
             name: 'Home',
             url: '/',
         },
+        {
+            name: 'About',
+            url: '/about',
+        },
+        {
+            name: 'Contact',
+            url: '/contact',
+        },
         // {
         //     name: 'Partners',
         //     url: '/partners',
@@ -32,10 +40,6 @@ const Nav: React.FC<NavProps> = ({
         //     name: 'Raw Materials',
         //     url: '/raw-materials',
         // },
-        {
-            name: 'Contact',
-            url: '/contact',
-        },
     ];
 
     const socials = [
