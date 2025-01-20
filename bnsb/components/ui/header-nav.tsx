@@ -101,7 +101,15 @@ const Nav: React.FC<NavProps> = ({
 
     return (
         <nav className="flex flex-1 flex-col w-full h-full p-2">
-            <ModeToggle />
+            <motion.div
+                custom={0}
+                variants={slideIn}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+            >
+                <ModeToggle />
+            </motion.div>
             <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} py-[15vh] md:py-24 justify-between h-full px-10 box-border`}>
                 <div className="flex flex-col gap-6 justify-end">
                     {links.map((link, index) => (
@@ -146,7 +154,16 @@ const Nav: React.FC<NavProps> = ({
                             </Link>
                         </motion.div>
                     ))}
-                    <p className="w-full pt-8 text-primary-foreground">&#169; Groupe BNSB {currentYear}. All rights reserved.</p>
+                    <motion.p
+                        custom={socials.length}
+                        variants={slideIn}
+                        animate="enter"
+                        exit="exit"
+                        initial="initial"
+                        className="w-full pt-8 text-primary-foreground"
+                    >
+                        &#169; Groupe BNSB {currentYear}. All rights reserved.
+                    </motion.p>
                 </div>
             </div>
         </nav>
