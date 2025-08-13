@@ -3,7 +3,7 @@ import Paragraph from "@/components/paragraph";
 
 export default function Home() {
 
-	const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl ultricies ultricies. Nullam nec purus nec nisl";
+	const paragraph = "We work with brands, retailers, and manufacturers to develop sustainable textile solutions that are better for people and the planet.";
 
     return (
         <div className="w-full flex flex-1 flex-col flex-grow h-full">
@@ -13,7 +13,7 @@ export default function Home() {
 						A more sustainable future for textile
 					</h1>
 					<p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center font-geist">
-						We are a design and sourcing office with experts over 25 years of experience in fashion, aiming for a more sustainable future. We work with brands, retailers, and manufacturers to develop sustainable textile solutions that are better for people and the planet.
+						We are a design and sourcing office with experts over 25 years of experience in fashion, aiming for a more sustainable future.
 					</p>
 				</div>
 			</div>
