@@ -26,16 +26,21 @@ const Header = () => {
         open: {
             width: size.width,
             height: size.height,
-            top: "-8px",
-            right: "-8px",
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]}
+            top: "-16px",
+            right: "-16px",
+            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]},
+            borderRadius: "0px",
+            backgroundColor: "hsl(var(--foreground) / 0.05)"
+            
         },
         closed: {
             width: 96,
             height: 40,
             top: "0px",
             right: "0px",
-            transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]}
+            transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]},
+            borderRadius: "24px",
+            backgroundColor: "hsl(var(--foreground) / 0)"
         }
     }
 
@@ -47,7 +52,7 @@ const Header = () => {
                 setIsLandscape(isLandscape && isMobile);
                 setSize({
                     width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
-                    height: isLandscape && isMobile ? 'calc(100vh - 32px)' : 'calc(100vh - 32px)',
+                    height: '100vh',
                 });
             }
         };
@@ -72,7 +77,7 @@ const Header = () => {
             </Link>
             <div className="fixed z-40 right-4 top-4">
                 <motion.div 
-                    className="bg-foreground relative rounded-3xl shadow-main-shadow"
+                    className="backdrop-blur-3xl relative shadow-main-shadow"
                     variants={variants}
                     animate={isActive ? "open" : "closed"}
                     initial="closed"

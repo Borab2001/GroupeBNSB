@@ -119,7 +119,7 @@ const Nav: React.FC<NavProps> = ({
                     {links.map((link, index) => (
                         <motion.div 
                             key={index}
-                            className="text-5xl text-primary-foreground"
+                            className="text-5xl text-foreground"
                             custom={index}
                             variants={animated}
                             animate="enter"
@@ -151,7 +151,7 @@ const Nav: React.FC<NavProps> = ({
                                 href={social.url}
                                 className="relative after:absolute after:bg-primary-foreground after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
                             >
-                                <span className="text-primary-foreground">
+                                <span className="text-foreground">
                                     {social.name}
                                 </span>
                                 
@@ -164,7 +164,7 @@ const Nav: React.FC<NavProps> = ({
                         animate="enter"
                         exit="exit"
                         initial="initial"
-                        className="w-full pt-8 text-primary-foreground"
+                        className="w-full pt-8 text-foreground"
                     >
                         &#169; Groupe BNSB {currentYear}. All rights reserved.
                     </motion.p>

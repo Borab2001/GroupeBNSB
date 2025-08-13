@@ -3,7 +3,7 @@ interface ButtonTextProps {
 }
 
 const ButtonText: React.FC<ButtonTextProps> = ({
-    label
+    label,
 }) => {
     return (
         <div className="w-full h-full font-medium">
