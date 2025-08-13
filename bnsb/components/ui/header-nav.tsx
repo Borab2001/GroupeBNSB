@@ -104,7 +104,7 @@ const Nav: React.FC<NavProps> = ({
     }
 
     return (
-        <nav className="flex flex-1 flex-col w-full h-full p-2">
+        <nav className="flex flex-1 flex-col w-full h-full p-4">
             <motion.div
                 custom={0}
                 variants={slideIn}
@@ -114,8 +114,8 @@ const Nav: React.FC<NavProps> = ({
             >
                 <ModeToggle />
             </motion.div>
-            <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} py-[15vh] md:py-24 justify-between h-full px-10 box-border`}>
-                <div className="flex flex-col gap-6 justify-end">
+            <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} pt-24 pb-8 justify-between h-full px-10 box-border`}>
+                <div className="flex flex-col gap-8 justify-end">
                     {links.map((link, index) => (
                         <motion.div 
                             key={index}
@@ -137,7 +137,7 @@ const Nav: React.FC<NavProps> = ({
                 </div>
 
                 <div className="flex flex-wrap items-end gap-y-1">
-                    {socials.map((social, index) => (
+                    {/* {socials.map((social, index) => (
                         <motion.div
                             key={`social_${index}`}
                             className={`${(isLandscape && isMobile) ? 'w-1/2' : 'w-1/2'} text-primary-foreground`}
@@ -157,7 +157,7 @@ const Nav: React.FC<NavProps> = ({
                                 
                             </Link>
                         </motion.div>
-                    ))}
+                    ))} */}
                     <motion.p
                         custom={socials.length}
                         variants={slideIn}
