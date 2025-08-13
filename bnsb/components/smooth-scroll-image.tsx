@@ -17,12 +17,12 @@ interface iISmoothScrollImageProps {
 	scrollHeight: number;
 	/**
 	 * Background image URL for desktop view
-	 * @default "https://images.unsplash.com/photo-1511884642898-4c92249e20b6"
+	 * @default ""
 	 */
 	desktopImage: string;
 	/**
 	 * Background image URL for mobile view
-	 * @default "https://images.unsplash.com/photo-1511207538754-e8555f2bc187?q=80&w=2412&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	 * @default ""
 	 */
 	mobileImage: string;
 	/**
@@ -37,7 +37,7 @@ interface iISmoothScrollImageProps {
 	finalClipPercentage: number;
 }
 
-interface iISmoothScrollImageBackgroundProps extends iISmoothScrollImageProps {}
+type iISmoothScrollImageBackgroundProps = iISmoothScrollImageProps
 
 const SmoothScrollImageBackground: React.FC<
 	iISmoothScrollImageBackgroundProps
@@ -108,8 +108,8 @@ const SmoothScrollImageBackground: React.FC<
  */
  const SmoothScrollImage: React.FC<iISmoothScrollImageProps> = ({
 	scrollHeight = 1500,
-	desktopImage = "https://images.unsplash.com/photo-1511884642898-4c92249e20b6",
-	mobileImage = "https://images.unsplash.com/photo-1511207538754-e8555f2bc187?q=80&w=2412&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+	desktopImage = "",
+	mobileImage = "",
 	initialClipPercentage = 25,
 	finalClipPercentage = 75,
 }) => {
