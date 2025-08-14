@@ -1,5 +1,6 @@
 import HorizontalScroll from "@/components/horizontal-scroll";
 import Paragraph from "@/components/paragraph";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
 
@@ -15,6 +16,14 @@ export default function Home() {
 					<p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center font-geist">
 						We are a design and sourcing office with experts over 25 years of experience in fashion, aiming for a more sustainable future.
 					</p>
+					 <Button 
+						onClick={() => router.push("/contact")}
+						variant="default"
+						size="xl"
+						className="mt-4 bg-main shadow-[inset_0_1px_0_rgba(255,255,255,0.25),_0_4px_4px_rgba(150,150,150,0.25),_0_1px_0_rgb(31,31,38),_0_10px_15px_-3px_rgba(0,0,0,0.1)]"
+					>
+						Contact Us
+					</Button>
 				</div>
 			</div>
 			<HorizontalScroll />
