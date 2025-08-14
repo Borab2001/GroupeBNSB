@@ -1,15 +1,21 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 import HorizontalScroll from "@/components/horizontal-scroll";
 import Paragraph from "@/components/paragraph";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
 
+export default function Home() {
+	
+	const router = useRouter();
 	const paragraph = "We work with brands, retailers, and manufacturers to develop sustainable textile solutions that are better for people and the planet.";
 
     return (
         <div className="w-full flex flex-1 flex-col flex-grow h-full">
 			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center p-4">
-				<div className="flex gap-4 flex-col">
+				<div className="flex gap-4 flex-col items-center">
 					<h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular font-playfair">
 						A more sustainable future for textile
 					</h1>
@@ -19,8 +25,8 @@ export default function Home() {
 					 <Button 
 						onClick={() => router.push("/contact")}
 						variant="default"
-						size="xl"
-						className="mt-4 bg-main shadow-[inset_0_1px_0_rgba(255,255,255,0.25),_0_4px_4px_rgba(150,150,150,0.25),_0_1px_0_rgb(31,31,38),_0_10px_15px_-3px_rgba(0,0,0,0.1)]"
+						size="lg"
+						className="mt-4 font-geist"
 					>
 						Contact Us
 					</Button>
