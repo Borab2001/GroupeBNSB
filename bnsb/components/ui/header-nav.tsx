@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ModeToggle } from "./mode-toggle";
+import { ThemeToggle } from "./theme-toggle";
 
 
 interface NavProps {
@@ -111,8 +111,9 @@ const Nav: React.FC<NavProps> = ({
                 animate="enter"
                 exit="exit"
                 initial="initial"
+                className="flex justify-start"
             >
-                <ModeToggle />
+                <ThemeToggle />
             </motion.div>
             <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} pt-24 pb-8 justify-between h-full px-10 box-border`}>
                 <div className="flex flex-col gap-8 justify-end">
@@ -166,7 +167,7 @@ const Nav: React.FC<NavProps> = ({
                         initial="initial"
                         className="w-full pt-8 text-foreground"
                     >
-                        &#169; Groupe BNSB {currentYear}. All rights reserved.
+                        &#169; {currentYear} Groupe BNSB
                     </motion.p>
                 </div>
             </div>

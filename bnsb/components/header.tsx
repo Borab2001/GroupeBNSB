@@ -32,6 +32,9 @@ const Header = () => {
             borderRadius: "0px",
             backgroundColor: "hsl(var(--foreground) / 0.05)",
             backdropFilter: "blur(64px)",
+            // Rains type glass
+            // backgroundColor: "hsla(0,0%,89%,0.52)",
+            // backdropFilter: "blur(12px)",
             
             
         },
