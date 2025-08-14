@@ -30,13 +30,12 @@ const Header = () => {
             right: "-16px",
             transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]},
             borderRadius: "0px",
-            backgroundColor: "hsl(var(--foreground) / 0.05)",
-            backdropFilter: "blur(64px)",
+            // backgroundColor: "hsl(var(--foreground) / 0.05)",
+            // backdropFilter: "blur(64px)",
             // Rains type glass
             // backgroundColor: "hsla(0,0%,89%,0.52)",
-            // backdropFilter: "blur(12px)",
-            
-            
+            backgroundColor: "hsl(var(--muted) / 0.52)",
+            backdropFilter: "blur(12px)",
         },
         closed: {
             width: 96,
@@ -45,7 +44,9 @@ const Header = () => {
             right: "0px",
             transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]},
             borderRadius: "24px",
-            backgroundColor: "hsl(var(--foreground) / 0)",
+            // backgroundColor: "hsl(var(--foreground) / 0)",
+            // backdropFilter: "blur(0px)",
+            backgroundColor: "hsl(var(--muted) / 0)",
             backdropFilter: "blur(0px)",
         }
     }
