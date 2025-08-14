@@ -71,7 +71,7 @@ const SmoothScrollImageBackground: React.FC<
 
 	return (
 		<motion.div
-			className="sticky top-0 h-screen w-full bg-black"
+			className="sticky top-0 h-screen w-full"
 			style={{
 				clipPath,
 				willChange: "transform, opacity",
