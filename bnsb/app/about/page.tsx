@@ -26,6 +26,7 @@ const About = () => {
                 <h1 className="text-5xl md:text-8xl font-medium">
                     About
                 </h1>
+                <p className="text-base md:text-lg text-muted-foreground">Everything started with lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. </p>
 
                 <SmoothScrollImage
 					scrollHeight={1500}
