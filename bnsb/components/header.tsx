@@ -4,7 +4,8 @@ import HeaderButton from "@/components/ui/header-button";
 import Nav from "@/components/ui/header-nav";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -25,16 +26,28 @@ const Header = () => {
         open: {
             width: size.width,
             height: size.height,
-            top: "-8px",
-            right: "-8px",
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]}
+            top: "-16px",
+            right: "-16px",
+            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]},
+            borderRadius: "0px",
+            // backgroundColor: "hsl(var(--foreground) / 0.05)",
+            // backdropFilter: "blur(64px)",
+            // Rains type glass
+            // backgroundColor: "hsla(0,0%,89%,0.52)",
+            backgroundColor: "hsl(var(--muted) / 0.52)",
+            backdropFilter: "blur(12px)",
         },
         closed: {
             width: 96,
             height: 40,
             top: "0px",
             right: "0px",
-            transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]}
+            transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]},
+            borderRadius: "24px",
+            // backgroundColor: "hsl(var(--foreground) / 0)",
+            // backdropFilter: "blur(0px)",
+            backgroundColor: "hsl(var(--muted) / 0)",
+            backdropFilter: "blur(0px)",
         }
     }
 
@@ -46,7 +59,7 @@ const Header = () => {
                 setIsLandscape(isLandscape && isMobile);
                 setSize({
                     width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
-                    height: isLandscape && isMobile ? 'calc(100vh - 16px)' : 650,
+                    height: '100vh',
                 });
             }
         };
@@ -63,18 +76,25 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="fixed z-40 right-4 top-16 sm:top-12">
-            <motion.div 
-                className="bg-main relative rounded-3xl shadow-main-shadow"
-                variants={variants}
-                animate={isActive ? "open" : "closed"}
-                initial="closed"
-            >
-                <AnimatePresence>
-                    {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
-                </AnimatePresence>
-            </motion.div>
-            <HeaderButton isActive={isActive} setIsActive={setIsActive} />
+        <header className="w-full h-[72px] flex flex-row justify-start items-center p-4 font-geist">
+            <Link
+                href="/"
+                className="uppercase font-medium">
+                Groupe BNSB
+            </Link>
+            <div className="fixed z-40 right-4 top-4">
+                <motion.div 
+                    className="relative shadow-main-shadow"
+                    variants={variants}
+                    animate={isActive ? "open" : "closed"}
+                    initial="closed"
+                >
+                    <AnimatePresence>
+                        {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
+                    </AnimatePresence>
+                </motion.div>
+                <HeaderButton isActive={isActive} setIsActive={setIsActive} />
+            </div>
         </header>
     );
 }

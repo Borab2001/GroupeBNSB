@@ -1,18 +1,33 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { 
+	// Noto_Sans, 
+	Playfair,
+	// Noto_Serif,
+	Geist,
+	// Lora
+} from "next/font/google";
 import "./globals.css";
 
-import { Analytics } from "@vercel/analytics/react"
-import NotificationBar from "@/components/notification-bar";
-import { Toaster } from "@/components/ui/sonner";
+import Header from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
+import ScrollProvider from "@/lib/scroll-provider";
+import PageTransition from "@/components/page-transition";
+import { AnimatePresence } from "framer-motion";
+import Footer from "@/components/ui/footer";
 
+const geist = Geist({
+	variable: "--font-geist",
+	subsets: ["latin"],
+});
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair({
+	variable: "--font-playfair",
+	subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-	title: "Groupe BNSB - Design & Sourcing Office",
-	description: "Groupe BNSB supports all players in the textile sector in their eco-responsible transition to enable the textile industry to be more sustainable.",
-	keywords: "fashion, sustainability, product passport, design, sourcing, biodiversity, eco-friendly, textile"
+	title: "Groupe BNSB",
+	description: "Groupe BNSB is a design and sourcing office based in Istanbul, specializing in textile design and production for a sustainable future.",
 };
 
 export default function RootLayout({
@@ -20,15 +35,28 @@ export default function RootLayout({
 }: Readonly<{
   	children: React.ReactNode;
 }>) {
-
-  return (
-    <html lang="en">
-		<body className={inter.className}>
-			<NotificationBar />
-			{children}
-			<Toaster />
-			<Analytics />
-		</body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<ScrollProvider>
+				<body
+					className={`${geist.variable} ${playfair.variable} antialiased`}
+				>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="dark"
+						enableSystem
+						disableTransitionOnChange
+					>
+						<AnimatePresence mode="wait">
+							<PageTransition>
+								<Header />
+								{children}
+								<Footer />
+							</PageTransition>
+						</AnimatePresence>
+					</ThemeProvider>
+				</body>
+			</ScrollProvider>
+		</html>
+	);
 }

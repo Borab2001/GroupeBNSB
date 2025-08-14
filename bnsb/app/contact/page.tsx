@@ -1,16 +1,21 @@
-import { ContactForm } from "@/components/ui/contact-form";
+import { ContactForm } from "@/components/contact-form";
 
-export default function Contact() {  
-
-  	return (
-		<main className="flex min-h-screen justify-center items-center">
-			<div className="max-w-3xl w-full px-4">
-				<div className="mb-8">
-					<h1 className="text-3xl mb-2">Let&apos;s Get In Touch</h1>
-					<p className="text-muted-foreground">You can reach us any time</p>
-				</div>
-				<ContactForm />
-			</div>
-		</main>
-  	);
+const Contact = () => {
+    return (
+        <div className="w-full flex flex-1 flex-col flex-grow h-full p-4 ">
+            <div className="w-full flex flex-1 flex-col justify-center items-center">
+                <div className="flex gap-4 flex-col">
+                    <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+                        Let&apos;s get in touch
+                    </h1>
+                    <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+                        You can reach us any time
+                    </p>
+                    <ContactForm />
+                </div>
+            </div>
+        </div>
+    );
 }
+ 
+export default Contact;

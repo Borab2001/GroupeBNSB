@@ -15,10 +15,10 @@ interface BNSBContactEmailProps {
 	lastName: string;
 	email: string;
 	subject: string;
-	// message: string;
 	messageLines: string[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const baseUrl = process.env.VERCEL_URL
 	? `https://${process.env.VERCEL_URL}`
 	: "";
@@ -31,7 +31,6 @@ export const BNSBContactEmail = ({
 	lastName,
 	email,
 	subject,
-	// message,
 	messageLines
 }: BNSBContactEmailProps) => (
 	<Html>
@@ -48,9 +47,6 @@ export const BNSBContactEmail = ({
 				<Text style={paragraph}>Email: {email}</Text>
 				<br />
 				<Text style={paragraph}>Subject: {subject}</Text>
-				{/* <Text style={paragraph}>
-					{message}
-				</Text> */}
 				{messageLines.map((line, index) => (
 					<Text key={index} style={paragraph}>{line}</Text>
 				))}
