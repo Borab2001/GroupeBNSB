@@ -22,7 +22,7 @@ export default function Home() {
 					<p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center font-geist">
 						We are a design and sourcing office with experts over 25 years of experience in fashion, aiming for a more sustainable future.
 					</p>
-					 <Button 
+					<Button 
 						onClick={() => router.push("/contact")}
 						variant="default"
 						size="lg"
