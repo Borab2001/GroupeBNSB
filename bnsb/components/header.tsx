@@ -76,7 +76,7 @@ const Header = () => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <header className="w-full h-[72px] flex flex-row justify-start items-center p-4">
+        <header className="w-full h-[72px] flex flex-row justify-start items-center p-4 font-geist">
             <Link
                 href="/"
                 className="uppercase font-medium">

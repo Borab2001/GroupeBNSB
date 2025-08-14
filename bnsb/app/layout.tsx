@@ -15,7 +15,7 @@ import PageTransition from "@/components/page-transition";
 import { AnimatePresence } from "framer-motion";
 import Footer from "@/components/ui/footer";
 
-const notoSans = Geist({
+const geist = Geist({
 	variable: "--font-geist",
 	subsets: ["latin"],
 });
@@ -39,11 +39,11 @@ export default function RootLayout({
 		<html lang="en">
 			<ScrollProvider>
 				<body
-					className={`${notoSans.variable} ${playfair.variable} antialiased`}
+					className={`${geist.variable} ${playfair.variable} antialiased`}
 				>
 					<ThemeProvider
 						attribute="class"
-						defaultTheme="system"
+						defaultTheme="dark"
 						enableSystem
 						disableTransitionOnChange
 					>
