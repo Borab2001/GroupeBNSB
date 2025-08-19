@@ -26,7 +26,8 @@ const Paragraph: React.FC<ParagraphProps> = ({
 
     return (
         <div ref={parentRef} className="relative h-[300vh]">
-            <div className="sticky top-0 mx-auto w-full max-w-screen-xl flex items-center justify-center h-screen p-4 md:p-8">
+            <div className="sticky top-0 mx-auto w-full max-w-screen-xl flex flex-col items-center justify-center gap-8 h-screen p-4 md:p-8">
+                <h2 className="text-lg md:text-xl font-medium text-muted-foreground">Mission</h2>
                 <p
                     className="flex flex-wrap justify-center gap-y-2 gap-x-1 md:gap-y-6 md:gap-x-3 text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground font-playfair"
                 >
