@@ -34,6 +34,12 @@ export default function Home() {
 			</div>
 			<HorizontalScroll />
 			<Paragraph value={paragraph} />
+			<section className="w-full p-4 md:p-8">
+				<div className="bg-foreground/5 flex flex-col items-center justify-center gap-8 p-4 md:p-8 rounded-3xl">
+					<h2 className="text-lg md:text-xl text-muted-foreground">Title</h2>
+					<p className="text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground font-playfair">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</section>
         </div>
     );
 }
