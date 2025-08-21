@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { 
 	// Noto_Sans, 
 	Playfair,
@@ -55,6 +56,7 @@ export default function RootLayout({
 							</PageTransition>
 						</AnimatePresence>
 					</ThemeProvider>
+					<Analytics />
 				</body>
 			</ScrollProvider>
 		</html>
