@@ -53,7 +53,7 @@ export function ContactForm() {
 	return (
 		<Form {...form}>
 			<form 
-				className="space-y-8"
+				className="w-full space-y-8 max-w-2xl mx-auto py-10"
 				onSubmit={form.handleSubmit(onSubmit)} 
 			>
 				<div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-4">
@@ -128,9 +128,14 @@ export function ContactForm() {
 					)}
 				/>
 
-				<Button type="submit" className="w-full group py-0 h-10 hover:bg-primary">
+				<Button 
+					type="submit" 
+					className="group py-0 h-10 mt-4 font-geist"
+					variant="default"
+					size="default"
+				>
 					<div className="relative h-full font-medium overflow-hidden">
-						<ButtonText label="Send" />
+						<ButtonText label="Submit" />
 					</div>
 				</Button>
 			</form>
