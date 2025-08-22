@@ -59,7 +59,10 @@ export default {
   		fontFamily: {
   			'geist': ['var(--font-geist)'],
   			'playfair': ['var(--font-playfair)']
-  		}
+  		},
+		minHeight: {
+			'hero': 'calc(100vh - 72px)',
+		}
   	}
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
