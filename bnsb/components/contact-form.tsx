@@ -93,7 +93,7 @@ export function ContactForm() {
 						<FormItem>
 							<FormLabel htmlFor="email">Email</FormLabel>
 							<FormControl>
-								<Input id="email" type="email" placeholder="Your email" {...field} />
+								<Input id="email" type="email" placeholder="Your email address" {...field} />
 							</FormControl>
 							<FormMessage>{form.formState.errors.email?.message}</FormMessage>
 						</FormItem>
