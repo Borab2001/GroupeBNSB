@@ -14,7 +14,7 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({
     return (
         <div
             onClick={() => {setIsActive(!isActive)}} 
-            className="h-10 w-24 border border-foreground/20 backdrop-blur-3xl rounded-3xl cursor-pointer absolute top-0 right-0 overflow-hidden"
+            className="h-10 w-24 border border-foreground/20 backdrop-blur-3xl bg-background/20 rounded-3xl cursor-pointer absolute top-0 right-0 overflow-hidden"
         >
             <motion.div 
                 className="relative w-full h-full"
