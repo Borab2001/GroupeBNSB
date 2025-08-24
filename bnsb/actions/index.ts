@@ -14,8 +14,8 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
         const messageLines = values.message.split('\n');
 
         const { data, error } = await resend.emails.send({
-            from: 'BNSB Website <onboarding@resend.dev>',
-            to: 'borabalos9+bnsb@gmail.com',
+            from: 'BNSB Contact Form <website@groupebnsb.com>',
+            to: 'info@groupebnsb.com',
             subject: 'New Contact Submission',
             replyTo: values.email,
             react: React.createElement(BNSBContactEmail, {
@@ -23,7 +23,6 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
                 lastName: values.lastName,
                 email: values.email,
                 subject: values.subject,
-                // message: values.message,
                 messageLines: messageLines,
             }),
         });
