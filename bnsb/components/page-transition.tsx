@@ -21,7 +21,7 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
 
             for (let i: number = 0; i < 20; i++) {
                 const block: HTMLDivElement = document.createElement("div");
-                block.className = "flex-1 w-full bg-[#222] transform scale-x-0 origin-left";
+                block.className = "flex-1 w-full bg-foreground transform scale-x-0 origin-left";
                 overlayRef.current.appendChild(block);
                 blocksRef.current.push(block);
             }
