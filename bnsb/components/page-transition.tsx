@@ -19,7 +19,23 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
             overlayRef.current.innerHTML = "";
             blocksRef.current = [];
 
-            for (let i: number = 0; i < 20; i++) {
+            let blockCount: number;
+            if (typeof window !== 'undefined') {
+                const screenWidth = window.innerWidth;
+                if (screenWidth < 480) {
+                    blockCount = 8;
+                } else if (screenWidth < 768) {
+                    blockCount = 12;
+                } else if (screenWidth < 1024) {
+                    blockCount = 16;
+                } else {
+                    blockCount = 20;
+                }
+            } else {
+                blockCount = 20;
+            }
+
+            for (let i: number = 0; i < blockCount; i++) {
                 const block: HTMLDivElement = document.createElement("div");
                 block.className = "flex-1 w-full bg-foreground transform scale-x-0 origin-left";
                 overlayRef.current.appendChild(block);
@@ -28,6 +44,14 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
         };
 
         createBlocks();
+
+        // Recréer les blocs lors du redimensionnement
+        const handleResize = () => {
+            createBlocks();
+            gsap.set(blocksRef.current, { scaleX: 0, transformOrigin: "left center" });
+        };
+
+        window.addEventListener('resize', handleResize);
 
         gsap.set(blocksRef.current, { scaleX: 0, transformOrigin: "left center" });
 
@@ -69,6 +93,7 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
         });
 
         return () => {
+            window.removeEventListener('resize', handleResize);
             links.forEach((link) => {
                 const handler = clickHandlers.get(link);
                 if (handler) {
