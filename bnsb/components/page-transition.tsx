@@ -134,6 +134,7 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
         gsap.to(blocksRef.current, {
             scaleX: 0,
             duration: 0.4,
+            delay: 0.4,
             stagger: 0.02,
             ease: "power2.out",
             transformOrigin: "right",
