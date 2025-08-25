@@ -10,12 +10,12 @@ import Link from "next/link";
 
 const Header = () => {
 
-    const [isLandscape, setIsLandscape] = useState(false);
-    const isMobileDevice = () => {
-        const userAgent = typeof navigator === 'undefined' ? '' : navigator.userAgent;
-        return /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-    };
-    const isMobile = isMobileDevice();
+    // const [isLandscape, setIsLandscape] = useState(false);
+    // const isMobileDevice = () => {
+    //     const userAgent = typeof navigator === 'undefined' ? '' : navigator.userAgent;
+    //     return /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    // };
+    // const isMobile = isMobileDevice();
 
     const [size, setSize] = useState<{width: number | string, height: number | string}>({
         width: 464,
@@ -30,10 +30,6 @@ const Header = () => {
             right: "-16px",
             transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]},
             borderRadius: "0px",
-            // backgroundColor: "hsl(var(--foreground) / 0.05)",
-            // backdropFilter: "blur(64px)",
-            // Rains type glass
-            // backgroundColor: "hsla(0,0%,89%,0.52)",
             backgroundColor: "hsl(var(--muted) / 0.52)",
             backdropFilter: "blur(12px)",
         },
@@ -44,34 +40,34 @@ const Header = () => {
             right: "0px",
             transition: {duration: 0.7, delay: 0.2, ease: [0.76, 0, 0.24, 1]},
             borderRadius: "24px",
-            // backgroundColor: "hsl(var(--foreground) / 0)",
-            // backdropFilter: "blur(0px)",
             backgroundColor: "hsl(var(--muted) / 0)",
             backdropFilter: "blur(0px)",
         }
     }
 
+    const handleResize = () => {
+        if (typeof window !== 'undefined') {
+            // const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+            
+            // setIsLandscape(isLandscape && isMobile);
+            setSize({
+                // width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
+                width: window.innerWidth > 480 ? 464 : 'calc(100vw - 16px)',
+                height: '100vh',
+            });
+        }
+    };
+
+
     useEffect(() => {
-        const handleResize = () => {
-            if (typeof window !== 'undefined') {
-                const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-                
-                setIsLandscape(isLandscape && isMobile);
-                setSize({
-                    width: (isLandscape && isMobile) || window.innerWidth <= 480 ? 'calc(100vw - 16px)' : 464,
-                    height: '100vh',
-                });
-            }
-        };
-    
-        handleResize(); // Set the size initially
+        handleResize();
         window.addEventListener('resize', handleResize);
-        window.addEventListener('orientationchange', handleResize);
+        // window.addEventListener('orientationchange', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener('orientationchange', handleResize);
+            // window.removeEventListener('orientationchange', handleResize);
         };
-    }, [isMobile]);
+    }, [/* isMobile */]);
 
     const [isActive, setIsActive] = useState(false);
 
@@ -90,7 +86,7 @@ const Header = () => {
                     initial="closed"
                 >
                     <AnimatePresence>
-                        {isActive && <Nav isLandscape={isLandscape} isMobile={isMobile} />}
+                        {isActive && <Nav />}
                     </AnimatePresence>
                 </motion.div>
                 <HeaderButton isActive={isActive} setIsActive={setIsActive} />

@@ -3,15 +3,7 @@ import { motion } from "motion/react";
 import { ThemeToggle } from "./theme-toggle";
 
 
-interface NavProps {
-    isLandscape: boolean;
-    isMobile: boolean;
-}
-
-const Nav: React.FC<NavProps> = ({
-    isLandscape,
-    isMobile
-}) => {
+const Nav = () => {
 
     const currentYear = new Date().getFullYear();
     
@@ -27,26 +19,10 @@ const Nav: React.FC<NavProps> = ({
         {
             name: 'Contact',
             url: '/contact',
-        },
-        // {
-        //     name: 'Partners',
-        //     url: '/partners',
-        // },
-        // {
-        //     name: 'Be Circular',
-        //     url: '/be-circular',
-        // },
-        // {
-        //     name: 'Raw Materials',
-        //     url: '/raw-materials',
-        // },
+        }
     ];
 
     const socials = [
-        // {
-        //     name: 'Facebook',
-        //     url: '/',
-        // },
         {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/company/groupe-bnsb/',
@@ -55,10 +31,6 @@ const Nav: React.FC<NavProps> = ({
             name: 'Instagram',
             url: 'https://www.instagram.com/groupebnsb/',
         },
-        // {
-        //     name: 'X',
-        //     url: '/',
-        // },
     ];
 
     const animated = {
@@ -115,7 +87,7 @@ const Nav: React.FC<NavProps> = ({
             >
                 <ThemeToggle />
             </motion.div>
-            <div className={`flex flex-1 ${(isLandscape && isMobile) ? 'flex-row flex-wrap gap-4' : 'flex-col'} pt-24 pb-8 justify-between h-full px-10 box-border`}>
+            <div className="flex flex-1 flex-col pt-24 pb-8 justify-between h-full px-10 box-border">
                 <div className="flex flex-col gap-8 justify-end">
                     {links.map((link, index) => (
                         <motion.div 
@@ -138,10 +110,10 @@ const Nav: React.FC<NavProps> = ({
                 </div>
 
                 <div className="flex flex-wrap items-end gap-y-1">
-                    {/* {socials.map((social, index) => (
+                    {socials.map((social, index) => (
                         <motion.div
                             key={`social_${index}`}
-                            className={`${(isLandscape && isMobile) ? 'w-1/2' : 'w-1/2'} text-primary-foreground`}
+                            className="w-1/2 text-primary-foreground"
                             custom={index}
                             variants={slideIn}
                             animate="enter"
@@ -158,9 +130,10 @@ const Nav: React.FC<NavProps> = ({
                                 
                             </Link>
                         </motion.div>
-                    ))} */}
+                    ))}
+
                     <motion.p
-                        custom={socials.length}
+                        custom={0}
                         variants={slideIn}
                         animate="enter"
                         exit="exit"
