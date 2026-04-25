@@ -1,0 +1,45 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
+import HorizontalScroll from "@/components/horizontal-scroll";
+import Paragraph from "@/components/paragraph";
+import { Button } from "@/components/ui/button";
+
+
+export default function HomeBackup() {
+	
+	const router = useRouter();
+	const paragraph = "We work with brands, retailers, and manufacturers to develop sustainable textile solutions that are better for people and the planet.";
+
+    return (
+        <div className="w-full flex flex-1 flex-col flex-grow h-full">
+			<div className="min-h-[80vh] w-full flex flex-1 flex-col justify-center items-center p-4">
+				<div className="flex gap-4 flex-col items-center">
+					<h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular font-playfair">
+						A more sustainable future for textile
+					</h1>
+					<p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center font-geist">
+						We are a design and sourcing office with experts over 25 years of experience in fashion, aiming for a more sustainable future.
+					</p>
+					<Button 
+						onClick={() => router.push("/contact")}
+						variant="default"
+						size="lg"
+						className="mt-4 font-geist"
+					>
+						Contact Us
+					</Button>
+				</div>
+			</div>
+			<HorizontalScroll />
+			<Paragraph value={paragraph} />
+			<section className="w-full p-4 md:p-8">
+				<div className="bg-foreground/5 flex flex-col items-center justify-center gap-8 p-4 md:p-8 rounded-3xl">
+					<h2 className="text-lg md:text-xl text-muted-foreground">Title</h2>
+					<p className="text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground font-playfair">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</section>
+        </div>
+    );
+}
